@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /professional timeline/
-title: professional timeline
+title: timeline
 description: professional timeline
 nav: true
 nav_order: 2
