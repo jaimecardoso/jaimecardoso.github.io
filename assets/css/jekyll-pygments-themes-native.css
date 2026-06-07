@@ -56,7 +56,10 @@
 } /* Generic.Inserted */
 .highlight .go {
   color: #cccccc;
-} /* Generic.Output */ /* Generic.Prompt */ /* Generic.Strong */
+} /* Generic.Output */
+.highlight .gp {
+  color: #aaaaaa;
+} /* Generic.Prompt */ /* Generic.Strong */
 .highlight .gu {
   color: #ffffff;
   text-decoration: underline;
