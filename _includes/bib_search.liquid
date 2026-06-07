@@ -1,9 +1,9 @@
 {% comment %}_includes/bib_search.liquid{% endcomment %}
 
 <style>
-/* ── Filter bar ─────────────────────────────────────────── */
+/* ── Filter bar ─────────────────────────────────────────────── */
 #pub-filter-bar {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.6rem;
   font-size: 0.88rem;
 }
 #pub-filter-bar .pub-filter-row {
@@ -11,12 +11,13 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 0.4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
 }
 #pub-filter-bar label {
   color: #777;
   margin: 0;
   white-space: nowrap;
+  min-width: 2.8rem;
 }
 #pub-search-input {
   flex: 1 1 200px;
@@ -39,6 +40,18 @@
 }
 #pub-clear-btn:hover { background: #e8e8e8; }
 
+/* year range inputs */
+.pub-year-input {
+  width: 72px;
+  padding: 0.33rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.86rem;
+  font-family: inherit;
+  text-align: center;
+}
+.pub-year-sep { color: #999; padding: 0 2px; }
+
 /* type chips */
 .pub-type-chip {
   padding: 0.28rem 0.65rem;
@@ -51,106 +64,122 @@
   transition: background 0.12s, color 0.12s;
   white-space: nowrap;
 }
-.pub-type-chip.active {
-  color: #fff !important;
-  border-color: transparent !important;
-}
-.pub-type-chip[data-type="all"]          { color: #555; border-color: #aaa; }
-.pub-type-chip[data-type="article"]      { color: #1976D2; }
-.pub-type-chip[data-type="inproceedings"]{ color: #388E3C; }
-.pub-type-chip[data-type="book"]         { color: #7B1FA2; }
-.pub-type-chip[data-type="incollection"] { color: #E65100; }
-.pub-type-chip[data-type="techreport"]   { color: #5D4037; }
-.pub-type-chip[data-type="thesis"]       { color: #0288D1; }
-.pub-type-chip[data-type="misc"]         { color: #546E7A; }
+.pub-type-chip.active { color: #fff !important; border-color: transparent !important; }
+
+.pub-type-chip[data-type="all"]           { color: #555; border-color: #aaa; }
+.pub-type-chip[data-type="article"]       { color: #1976D2; }
+.pub-type-chip[data-type="inproceedings"] { color: #388E3C; }
+.pub-type-chip[data-type="book"]          { color: #7B1FA2; }
+.pub-type-chip[data-type="other"]         { color: #7a7a7a; }
 
 .pub-type-chip.active[data-type="all"]           { background: #555; }
 .pub-type-chip.active[data-type="article"]       { background: #1976D2; }
 .pub-type-chip.active[data-type="inproceedings"] { background: #388E3C; }
 .pub-type-chip.active[data-type="book"]          { background: #7B1FA2; }
-.pub-type-chip.active[data-type="incollection"]  { background: #E65100; }
-.pub-type-chip.active[data-type="techreport"]    { background: #5D4037; }
-.pub-type-chip.active[data-type="thesis"]        { background: #0288D1; }
-.pub-type-chip.active[data-type="misc"]          { background: #546E7A; }
+.pub-type-chip.active[data-type="other"]         { background: #7a7a7a; }
 
 /* count */
-#pub-count { font-size: 0.83rem; color: #666; }
+#pub-count { font-size: 0.83rem; color: #666; margin-top: 0.15rem; }
 
-/* ── Per-entry type badge (same look as the DOI button) ─── */
+/* ── Per-entry type badge (same btn look as DOI button) ─────── */
 .pub-type-tag {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.7rem !important;
   font-weight: 600;
-  padding: 2px 8px;
+  padding: 2px 8px !important;
   border-radius: 3px;
   text-decoration: none !important;
   cursor: default;
   user-select: none;
   vertical-align: middle;
-  /* match al-folio btn look */
   border: 1px solid currentColor;
   line-height: 1.5;
   margin-right: 2px;
 }
-.pub-type-tag[data-type="article"]      { color: #1976D2; }
-.pub-type-tag[data-type="inproceedings"]{ color: #388E3C; }
-.pub-type-tag[data-type="book"]         { color: #7B1FA2; }
-.pub-type-tag[data-type="incollection"] { color: #E65100; }
-.pub-type-tag[data-type="techreport"]   { color: #5D4037; }
-.pub-type-tag[data-type="thesis"]       { color: #0288D1; }
-.pub-type-tag[data-type="misc"],
-.pub-type-tag[data-type="other"]        { color: #546E7A; }
+.pub-type-tag[data-type="article"]       { color: #1976D2; }
+.pub-type-tag[data-type="inproceedings"] { color: #388E3C; }
+.pub-type-tag[data-type="book"]          { color: #7B1FA2; }
+.pub-type-tag[data-type="other"]         { color: #7a7a7a; }
 
-/* ── BibTeX toggle button (matches DOI btn style) ────────── */
-a.pub-bib-btn {
-  font-size: 0.7rem !important;
-}
-/* Collapsible bibtex block (same as al-folio .abstract.hidden) */
-.pub-bibtex-block {
-  display: none;
-  margin-top: 0.5rem;
-}
-.pub-bibtex-block.open { display: block; }
+/* ── BibTeX toggle ──────────────────────────────────────────── */
+a.pub-bib-btn { font-size: 0.7rem !important; }
+
+.pub-bibtex-block          { display: none; margin-top: 0.5rem; }
+.pub-bibtex-block.open     { display: block; }
 .pub-bibtex-block pre {
   background: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0.75rem;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   overflow-x: auto;
   white-space: pre;
+  margin: 0;
+}
+
+/* ── Publication counter badge beside each entry ────────────── */
+li.pub-entry {
+  counter-increment: none;  /* we handle numbering ourselves */
+  position: relative;
+}
+.pub-entry-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #999;
+  min-width: 1.8rem;
+  text-align: right;
+  margin-right: 0.35rem;
+  vertical-align: top;
+  line-height: 1.6;
+  user-select: none;
 }
 </style>
 
-<!-- ── Filter bar markup ──────────────────────────────────────── -->
+<!-- ── Filter bar ──────────────────────────────────────────────── -->
 <div id="pub-filter-bar">
 
   <div class="pub-filter-row">
-    <input id="pub-search-input" type="text" placeholder="Search title, author, venue…" aria-label="Search publications" autocomplete="off">
-    <button id="pub-clear-btn">✕ Clear</button>
+    <label>Search</label>
+    <input id="pub-search-input" type="text"
+           placeholder="title, author, venue…"
+           aria-label="Search publications" autocomplete="off">
+    <button id="pub-clear-btn">✕ Clear all</button>
   </div>
 
   <div class="pub-filter-row">
-    <label>Type:</label>
+    <label>Type</label>
     <button class="pub-type-chip active" data-type="all">All</button>
     <button class="pub-type-chip" data-type="article">Journal</button>
     <button class="pub-type-chip" data-type="inproceedings">Conference</button>
     <button class="pub-type-chip" data-type="book">Book</button>
-    <button class="pub-type-chip" data-type="incollection">Book Chapter</button>
-    <button class="pub-type-chip" data-type="techreport">Tech Report</button>
-    <button class="pub-type-chip" data-type="thesis">Thesis</button>
-    <button class="pub-type-chip" data-type="misc">Preprint</button>
+    <button class="pub-type-chip" data-type="other">Other</button>
+  </div>
+
+  <div class="pub-filter-row">
+    <label>Years</label>
+    <input class="pub-year-input" id="pub-year-from" type="number"
+           placeholder="from" min="1990" max="2030" aria-label="Year from">
+    <span class="pub-year-sep">–</span>
+    <input class="pub-year-input" id="pub-year-to" type="number"
+           placeholder="to"   min="1990" max="2030" aria-label="Year to">
   </div>
 
   <div id="pub-count">Showing <strong id="pub-count-n">…</strong> publications</div>
 </div>
 
-<!-- ── All logic in one self-contained script ─────────────────── -->
+<!-- ── Logic ──────────────────────────────────────────────────── -->
 <script>
 (function () {
   "use strict";
 
-  /* ── Run after DOM is ready ─────────────────────────────── */
+  /* Types that have their own chip; everything else → "other" */
+  var KNOWN_TYPES = { article: true, inproceedings: true, book: true };
+
+  function canonicalType(raw) {
+    return KNOWN_TYPES[raw] ? raw : "other";
+  }
+
   function ready(fn) {
     if (document.readyState !== "loading") fn();
     else document.addEventListener("DOMContentLoaded", fn);
@@ -158,71 +187,60 @@ a.pub-bib-btn {
 
   ready(function () {
 
-    /* ── 1. Gather every <li> that jekyll-scholar produced.
-            Structure: h2(year) → ol.bibliography → li → div.row → div#key
-            We need the <li> as our filter unit.                   ── */
-    var pubsDiv   = document.querySelector(".publications");
+    var pubsDiv = document.querySelector(".publications");
     if (!pubsDiv) return;
 
+    /* All <li> entries, in DOM order (already descending by year from jekyll-scholar) */
     var allLi = Array.from(pubsDiv.querySelectorAll("ol.bibliography > li"));
     if (!allLi.length) return;
 
-    /* ── 2. For each <li>, read the hook's hidden meta div,
-            stamp data attributes onto the <li>, inject type badge
-            and BibTeX button into the .links div.                  ── */
+    /* ── Decorate every <li> ────────────────────────────────── */
     allLi.forEach(function (li) {
-
       var meta = li.querySelector(".pub-meta-hook");
       if (!meta) return;
 
-      var typeKey   = meta.getAttribute("data-type-key")   || "other";
+      var rawType   = meta.getAttribute("data-type-key")   || "other";
       var typeLabel = meta.getAttribute("data-type-label") || "Other";
       var entryKey  = meta.getAttribute("data-entry-key")  || "";
-      var entryYear = meta.getAttribute("data-entry-year") || "0";
+      var entryYear = parseInt(meta.getAttribute("data-entry-year") || "0", 10);
+      var cType     = canonicalType(rawType);
 
-      /* stamp the <li> for filtering */
-      li.setAttribute("data-pub-type", typeKey);
+      /* Stamp <li> for filtering */
+      li.setAttribute("data-pub-type", cType);
       li.setAttribute("data-pub-year", entryYear);
       li.setAttribute("data-pub-text", li.textContent.toLowerCase());
+      li.classList.add("pub-entry");
 
-      /* ── type badge: prepend to .links div ── */
+      /* Type badge → prepend to .links */
       var linksDiv = li.querySelector(".links");
       if (linksDiv) {
         var badge = document.createElement("a");
         badge.className = "pub-type-tag btn btn-sm z-depth-0";
-        badge.setAttribute("data-type", typeKey);
+        badge.setAttribute("data-type", cType);
         badge.setAttribute("role", "button");
         badge.textContent = typeLabel;
-        badge.style.cursor = "default";
         linksDiv.insertBefore(badge, linksDiv.firstChild);
       }
 
-      /* ── BibTeX toggle button + collapsible block ── */
+      /* BibTeX toggle */
       var bibScript = li.querySelector(".pub-raw-bibtex");
       if (bibScript && linksDiv) {
-        var rawBib = bibScript.textContent.trim();
-
-        /* button */
-        var bibBtn = document.createElement("a");
+        var rawBib  = bibScript.textContent.trim();
+        var bibBtn  = document.createElement("a");
         bibBtn.className = "pub-bib-btn btn btn-sm z-depth-0";
         bibBtn.setAttribute("role", "button");
         bibBtn.textContent = "Bib";
         linksDiv.appendChild(bibBtn);
 
-        /* collapsible block */
         var bibBlock = document.createElement("div");
         bibBlock.className = "pub-bibtex-block";
         var pre = document.createElement("pre");
         pre.textContent = rawBib;
         bibBlock.appendChild(pre);
 
-        /* insert block after the main col div */
         var colDiv = li.querySelector("[id='" + entryKey + "']");
-        if (colDiv) {
-          colDiv.appendChild(bibBlock);
-        }
+        if (colDiv) colDiv.appendChild(bibBlock);
 
-        /* toggle on click */
         bibBtn.addEventListener("click", function () {
           var open = bibBlock.classList.toggle("open");
           bibBtn.classList.toggle("active", open);
@@ -230,34 +248,57 @@ a.pub-bib-btn {
       }
     });
 
-    /* ── 3. Filter state ──────────────────────────────────── */
-    var activeType  = "all";
-    var searchText  = "";
+    /* ── Numbering: assign descending numbers to visible entries ── */
+    function updateNumbers() {
+      var visible = allLi.filter(function (li) {
+        return li.style.display !== "none";
+      });
+      var total = visible.length;
+      visible.forEach(function (li, idx) {
+        var num = li.querySelector(".pub-entry-num");
+        if (!num) {
+          /* insert before the div.row */
+          num = document.createElement("span");
+          num.className = "pub-entry-num";
+          var row = li.querySelector(".row");
+          if (row) li.insertBefore(num, row);
+          else li.insertBefore(num, li.firstChild);
+        }
+        num.textContent = (total - idx) + ".";
+      });
+    }
 
-    /* ── 4. Apply filters: show/hide <li>s, then hide empty
-            h2+ol year sections.                               ── */
+    /* ── Filter state ───────────────────────────────────────── */
+    var activeType = "all";
+    var searchText = "";
+    var yearFrom   = null;
+    var yearTo     = null;
+
+    /* ── Apply filters + hide empty year sections + renumber ── */
     function applyFilters() {
       var visible = 0;
 
       allLi.forEach(function (li) {
-        var t   = li.getAttribute("data-pub-type") || "other";
-        var txt = li.getAttribute("data-pub-text") || "";
+        var t    = li.getAttribute("data-pub-type") || "other";
+        var y    = parseInt(li.getAttribute("data-pub-year") || "0", 10);
+        var txt  = li.getAttribute("data-pub-text") || "";
 
         var typeOk   = (activeType === "all") || (t === activeType);
         var searchOk = !searchText || txt.indexOf(searchText) !== -1;
+        var yearFromOk = !yearFrom || y >= yearFrom;
+        var yearToOk   = !yearTo   || y <= yearTo;
 
-        var show = typeOk && searchOk;
+        var show = typeOk && searchOk && yearFromOk && yearToOk;
         li.style.display = show ? "" : "none";
         if (show) visible++;
       });
 
-      /* hide year h2 headings whose following ol has no visible <li> */
+      /* Hide year h2 + its ol when all children are hidden */
       var nodes = Array.from(pubsDiv.children);
       var i = 0;
       while (i < nodes.length) {
         var node = nodes[i];
         if (node.tagName === "H2") {
-          /* find the ol that follows this h2 */
           var ol = null;
           var j = i + 1;
           while (j < nodes.length && nodes[j].tagName !== "H2") {
@@ -266,7 +307,7 @@ a.pub-bib-btn {
           }
           if (ol) {
             var hasVisible = Array.from(ol.querySelectorAll("li"))
-                               .some(function (li) { return li.style.display !== "none"; });
+              .some(function (l) { return l.style.display !== "none"; });
             node.style.display = hasVisible ? "" : "none";
             ol.style.display   = hasVisible ? "" : "none";
           }
@@ -275,33 +316,39 @@ a.pub-bib-btn {
       }
 
       document.getElementById("pub-count-n").textContent = visible;
+      updateNumbers();
     }
 
-    /* initial count (brief delay so DOM is fully painted) */
-    setTimeout(function () {
-      document.getElementById("pub-count-n").textContent = allLi.length;
-    }, 50);
+    /* Initial state */
+    setTimeout(function () { applyFilters(); }, 60);
 
-    /* ── 5. Wire up controls ─────────────────────────────── */
-
-    /* search */
+    /* ── Wire controls ──────────────────────────────────────── */
     document.getElementById("pub-search-input").addEventListener("input", function () {
       searchText = this.value.trim().toLowerCase();
       applyFilters();
     });
 
-    /* clear */
+    document.getElementById("pub-year-from").addEventListener("input", function () {
+      yearFrom = this.value ? parseInt(this.value, 10) : null;
+      applyFilters();
+    });
+
+    document.getElementById("pub-year-to").addEventListener("input", function () {
+      yearTo = this.value ? parseInt(this.value, 10) : null;
+      applyFilters();
+    });
+
     document.getElementById("pub-clear-btn").addEventListener("click", function () {
       document.getElementById("pub-search-input").value = "";
-      searchText = "";
-      activeType = "all";
+      document.getElementById("pub-year-from").value   = "";
+      document.getElementById("pub-year-to").value     = "";
+      searchText = ""; yearFrom = null; yearTo = null; activeType = "all";
       document.querySelectorAll(".pub-type-chip").forEach(function (c) {
         c.classList.toggle("active", c.getAttribute("data-type") === "all");
       });
       applyFilters();
     });
 
-    /* type chips */
     document.querySelectorAll(".pub-type-chip").forEach(function (chip) {
       chip.addEventListener("click", function () {
         activeType = chip.getAttribute("data-type");
@@ -312,6 +359,6 @@ a.pub-bib-btn {
       });
     });
 
-  }); /* end ready */
+  });
 }());
 </script>

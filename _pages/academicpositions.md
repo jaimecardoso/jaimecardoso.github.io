@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /academic positions/
-title: academic positions
-description: academic positions and training
+permalink: /professional timeline/
+title: professional timeline
+description: professional timeline
 nav: true
 nav_order: 2
 ---
@@ -57,4 +57,32 @@ nav_order: 2
 			<p><em>University of Porto</em>, Faculty of Engineering</p>
 		</div>
 	</li>
-</ul>
+	<li>
+		<div class="dates">
+			<span>2006</span>
+		</div>
+		<div class="content">
+			<h4>Ph.D. in ECE (Computer Vision)</h4>
+			<p><em>University of Porto</em>, Faculty of Engineering</p>
+      <p>Title of the thesis: "Metadata Assisted Image Segmentation"</p>      
+		</div>
+	</li>
+	<li>
+		<div class="dates">
+			<span>2005</span>
+		</div>
+		<div class="content">
+			<h4>Master in Mathematical Engineering</h4>
+			<p><em>University of Porto</em>, Faculty of Sciences</p>
+		</div>
+	</li>  
+	<li>
+		<div class="dates">
+			<span>1999</span>
+		</div>
+		<div class="content">
+			<h4>Licentiate (5-year Licenciatura) in ECE</h4>
+			<p><em>University of Porto</em>, Faculty of Engineering</p>
+		</div>
+	</li>   
+</ul>  

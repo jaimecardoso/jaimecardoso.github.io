@@ -1,38 +1,22 @@
 {% comment %}
   _includes/hook/bib.liquid
-  This is called inside bib.liquid's periodical assembly block.
-  We use it to:
-    1. Stamp each entry's outer <li> with data-pub-type and data-pub-year
-       so the JS filter can find them reliably.
-    2. The type badge and BibTeX button are injected via the JS below —
-       we output the raw data here, the JS reads it.
+  Called once per entry inside bib.liquid.
+  Emits hidden metadata that bib_search.liquid's JS reads to:
+    - stamp data-pub-type / data-pub-year on the <li>
+    - inject the type badge and BibTeX toggle button
 {% endcomment %}
 
-{%- comment -%} Determine label for this entry type {%- endcomment -%}
-{%- assign _pt_label = "Other" -%}
-{%- assign _pt_key   = "other" -%}
+{%- assign _pt_label = "Other"      -%}
+{%- assign _pt_key   = "other"      -%}
+
 {%- if entry.type == "article" -%}
-  {%- assign _pt_label = "Journal"       -%}{%- assign _pt_key = "article"       -%}
+  {%- assign _pt_label = "Journal"      -%}{%- assign _pt_key = "article"       -%}
 {%- elsif entry.type == "inproceedings" -%}
-  {%- assign _pt_label = "Conference"    -%}{%- assign _pt_key = "inproceedings" -%}
+  {%- assign _pt_label = "Conference"   -%}{%- assign _pt_key = "inproceedings" -%}
 {%- elsif entry.type == "book" -%}
-  {%- assign _pt_label = "Book"          -%}{%- assign _pt_key = "book"          -%}
-{%- elsif entry.type == "incollection" -%}
-  {%- assign _pt_label = "Book Chapter"  -%}{%- assign _pt_key = "incollection"  -%}
-{%- elsif entry.type == "techreport" -%}
-  {%- assign _pt_label = "Tech Report"   -%}{%- assign _pt_key = "techreport"    -%}
-{%- elsif entry.type == "phdthesis" or entry.type == "mastersthesis" or entry.type == "thesis" -%}
-  {%- assign _pt_label = "Thesis"        -%}{%- assign _pt_key = "thesis"        -%}
-{%- elsif entry.type == "misc" -%}
-  {%- assign _pt_label = "Preprint"      -%}{%- assign _pt_key = "misc"          -%}
+  {%- assign _pt_label = "Book"         -%}{%- assign _pt_key = "book"          -%}
 {%- endif -%}
 
-{%- comment -%}
-  Emit a hidden marker div that carries the type + year + raw bibtex.
-  bib.liquid wraps everything in  <div id="{{ entry.key }}" class="col-sm-10">.
-  Our JS walks up to the parent <li> and stamps data attributes onto it.
-  We also output the bibtex payload here so JS can build the toggle block.
-{%- endcomment -%}
 <div class="pub-meta-hook"
      data-type-key="{{ _pt_key }}"
      data-type-label="{{ _pt_label }}"
@@ -40,8 +24,4 @@
      data-entry-year="{{ entry.year }}"
      style="display:none"></div>
 
-{%- comment -%}
-  Store raw bibtex for the toggle. We output it as a <script type="text/plain">
-  block so special characters are safe. JS will read .textContent.
-{%- endcomment -%}
 <script type="text/plain" class="pub-raw-bibtex" id="bibtex-{{ entry.key }}">{{ entry.bibtex | hideCustomBibtex }}</script>
