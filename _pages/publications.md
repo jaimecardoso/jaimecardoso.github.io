@@ -10,10 +10,11 @@ nav_order: 2
 <!-- _pages/publications.md -->
 
 <!-- Bibsearch Feature -->
-
 {% include bib_search.liquid %}
 
 <div class="publications">
+
+{% assign sorted_years = site.data.publication_types | map: "year" | uniq | sort | reverse %}
 
 {% bibliography %}
 

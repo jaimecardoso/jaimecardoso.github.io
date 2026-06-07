@@ -1,0 +1,43 @@
+// _sass/_pub_type_badges.scss
+// Add `@import "pub_type_badges";` to your assets/css/main.scss
+// OR paste the contents directly into _sass/_base.scss or similar.
+
+.pub-type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-left: 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+  // border and color are set inline per-type; this handles hover
+  opacity: 0.9;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Make filter chips look reasonable regardless of theme
+#pubfilter-wrapper {
+  .type-chip {
+    transition: background 0.15s, color 0.15s;
+    font-family: inherit;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-family: inherit;
+  }
+}
+
+// Counter pill
+#pub-count {
+  padding: 2px 0;
+}

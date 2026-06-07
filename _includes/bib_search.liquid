@@ -1,0 +1,262 @@
+<!-- _includes/bib_search.liquid -->
+<!-- Enhanced publication search & filter with type tags, live count, author/venue/year filtering -->
+
+<div id="pubfilter-wrapper" style="margin-bottom: 1.5rem;">
+
+  <!-- Search bar -->
+  <div style="display:flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem;">
+    <input
+      id="pubsearch"
+      type="text"
+      placeholder="Search title, author, venue…"
+      style="flex: 1 1 220px; padding: 0.45rem 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem;"
+      aria-label="Search publications"
+    />
+    <button id="pubsearch-clear"
+      style="padding: 0.45rem 0.8rem; border: 1px solid #ccc; border-radius: 4px; background: #f5f5f5; cursor: pointer; font-size: 0.85rem;"
+      title="Clear search">✕ Clear</button>
+  </div>
+
+  <!-- Type filter chips -->
+  <div id="type-filters" style="display:flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+    <span style="font-size:0.82rem; color:#666; align-self:center; margin-right:0.3rem;">Type:</span>
+    <button class="type-chip active" data-type="all"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #aaa; background:#555; color:#fff; cursor:pointer; font-size:0.8rem;">
+      All
+    </button>
+    <button class="type-chip" data-type="article"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #2196F3; color:#2196F3; background:#fff; cursor:pointer; font-size:0.8rem;">
+      Journal
+    </button>
+    <button class="type-chip" data-type="inproceedings"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #4CAF50; color:#4CAF50; background:#fff; cursor:pointer; font-size:0.8rem;">
+      Conference
+    </button>
+    <button class="type-chip" data-type="book"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #9C27B0; color:#9C27B0; background:#fff; cursor:pointer; font-size:0.8rem;">
+      Book
+    </button>
+    <button class="type-chip" data-type="incollection"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #FF9800; color:#FF9800; background:#fff; cursor:pointer; font-size:0.8rem;">
+      Book Chapter
+    </button>
+    <button class="type-chip" data-type="techreport"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #795548; color:#795548; background:#fff; cursor:pointer; font-size:0.8rem;">
+      Technical Report
+    </button>
+    <button class="type-chip" data-type="misc"
+      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #607D8B; color:#607D8B; background:#fff; cursor:pointer; font-size:0.8rem;">
+      Preprint / Other
+    </button>
+  </div>
+
+  <!-- Year range filter -->
+  <div style="display:flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem;">
+    <span style="font-size:0.82rem; color:#666;">Year:</span>
+    <input id="year-from" type="number" placeholder="From" min="1990" max="2030"
+      style="width: 80px; padding: 0.35rem 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.85rem;" />
+    <span style="color:#666;">–</span>
+    <input id="year-to" type="number" placeholder="To" min="1990" max="2030"
+      style="width: 80px; padding: 0.35rem 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.85rem;" />
+  </div>
+
+  <!-- Result count -->
+  <div id="pub-count" style="font-size: 0.85rem; color: #555; margin-bottom: 0.5rem;">
+    Showing <strong id="pub-count-n">…</strong> publications
+  </div>
+
+</div>
+
+<script>
+(function() {
+  // Type label badge colors (must match CSS above, used for injected badges)
+  const TYPE_META = {
+    article:       { label: "Journal",           color: "#2196F3" },
+    inproceedings: { label: "Conference",         color: "#4CAF50" },
+    book:          { label: "Book",               color: "#9C27B0" },
+    incollection:  { label: "Book Chapter",       color: "#FF9800" },
+    techreport:    { label: "Technical Report",   color: "#795548" },
+    misc:          { label: "Preprint / Other",   color: "#607D8B" },
+  };
+
+  function getBadgeHTML(type) {
+    const t = TYPE_META[type] || { label: type, color: "#607D8B" };
+    return `<span class="pub-type-badge" data-type="${type}" style="
+      display:inline-block; padding:2px 8px; border-radius:999px;
+      border:1px solid ${t.color}; color:${t.color}; font-size:0.72rem;
+      font-weight:600; margin-left:6px; vertical-align:middle; white-space:nowrap;
+    ">${t.label}</span>`;
+  }
+
+  function init() {
+    const pubDiv = document.querySelector('.publications');
+    if (!pubDiv) return;
+
+    // Collect all li items (publications)
+    const allItems = Array.from(pubDiv.querySelectorAll('li'));
+
+    // Inject type badges & attach data attributes to each li
+    allItems.forEach(function(li) {
+      // Try to get type from data-bib-type attribute (al-folio sets this)
+      // Fallback: infer from context
+      let type = li.getAttribute('data-bib-type') || '';
+
+      // al-folio wraps with class like "article", "inproceedings", etc. on the li or parent
+      if (!type) {
+        const cls = li.className || '';
+        const parentCls = (li.parentElement || {}).className || '';
+        const combined = cls + ' ' + parentCls;
+        for (const t of Object.keys(TYPE_META)) {
+          if (combined.toLowerCase().includes(t)) { type = t; break; }
+        }
+      }
+
+      // Store type on the element
+      li.setAttribute('data-pub-type', type || 'misc');
+
+      // Find year from the nearest h2 (year heading)
+      let yearHeading = li.closest('ol, ul');
+      let prevEl = yearHeading ? yearHeading.previousElementSibling : null;
+      while (prevEl && prevEl.tagName !== 'H2') {
+        prevEl = prevEl.previousElementSibling;
+      }
+      const year = prevEl ? parseInt(prevEl.textContent.trim()) : 0;
+      li.setAttribute('data-pub-year', year);
+
+      // Grab text for full-text search
+      li.setAttribute('data-pub-text', li.textContent.toLowerCase());
+
+      // Inject badge after title (first <span> or just prepend to li content area)
+      if (type && !li.querySelector('.pub-type-badge')) {
+        // Find best insertion point: after title link or at start of the entry div
+        const titleEl = li.querySelector('.title') || li.querySelector('span.title') || li.querySelector('a');
+        if (titleEl) {
+          titleEl.insertAdjacentHTML('afterend', getBadgeHTML(type));
+        } else {
+          li.insertAdjacentHTML('afterbegin', getBadgeHTML(type));
+        }
+      }
+    });
+
+    // --- Filter logic ---
+    let activeType = 'all';
+    let searchText = '';
+    let yearFrom = null;
+    let yearTo = null;
+
+    function applyFilters() {
+      let visible = 0;
+      allItems.forEach(function(li) {
+        const t = li.getAttribute('data-pub-type') || 'misc';
+        const y = parseInt(li.getAttribute('data-pub-year') || '0');
+        const txt = li.getAttribute('data-pub-text') || '';
+
+        const typeMatch = activeType === 'all' || t === activeType;
+        const textMatch = !searchText || txt.includes(searchText);
+        const yearFromMatch = !yearFrom || y >= yearFrom;
+        const yearToMatch = !yearTo || y <= yearTo;
+
+        const show = typeMatch && textMatch && yearFromMatch && yearToMatch;
+        li.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      // Hide year h2 headings that have no visible children
+      pubDiv.querySelectorAll('h2').forEach(function(h2) {
+        let next = h2.nextElementSibling;
+        let hasVisible = false;
+        while (next && next.tagName !== 'H2') {
+          if (next.tagName === 'OL' || next.tagName === 'UL') {
+            const lis = Array.from(next.querySelectorAll('li'));
+            if (lis.some(function(l) { return l.style.display !== 'none'; })) {
+              hasVisible = true;
+            }
+          }
+          next = next.nextElementSibling;
+        }
+        h2.style.display = hasVisible ? '' : 'none';
+      });
+
+      document.getElementById('pub-count-n').textContent = visible;
+    }
+
+    // Initial count
+    setTimeout(function() {
+      document.getElementById('pub-count-n').textContent = allItems.length;
+    }, 100);
+
+    // Search input
+    document.getElementById('pubsearch').addEventListener('input', function(e) {
+      searchText = e.target.value.trim().toLowerCase();
+      applyFilters();
+    });
+
+    // Clear button
+    document.getElementById('pubsearch-clear').addEventListener('click', function() {
+      document.getElementById('pubsearch').value = '';
+      searchText = '';
+      document.getElementById('year-from').value = '';
+      document.getElementById('year-to').value = '';
+      yearFrom = null;
+      yearTo = null;
+      activeType = 'all';
+      document.querySelectorAll('.type-chip').forEach(function(c) {
+        c.classList.remove('active');
+        c.style.background = c.style.background.includes('555') ? '#f5f5f5' : '#fff';
+        c.style.color = c.getAttribute('data-type') === 'all' ? '#555' : '';
+      });
+      document.querySelector('.type-chip[data-type="all"]').classList.add('active');
+      document.querySelector('.type-chip[data-type="all"]').style.background = '#555';
+      document.querySelector('.type-chip[data-type="all"]').style.color = '#fff';
+      applyFilters();
+    });
+
+    // Type chips
+    document.querySelectorAll('.type-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        activeType = chip.getAttribute('data-type');
+        document.querySelectorAll('.type-chip').forEach(function(c) {
+          const ct = c.getAttribute('data-type');
+          const meta = TYPE_META[ct];
+          if (c === chip) {
+            c.classList.add('active');
+            c.style.background = meta ? meta.color : '#555';
+            c.style.color = '#fff';
+            c.style.borderColor = meta ? meta.color : '#555';
+          } else {
+            c.classList.remove('active');
+            c.style.background = '#fff';
+            c.style.color = meta ? meta.color : '#555';
+            c.style.borderColor = meta ? meta.color : '#aaa';
+          }
+        });
+        // Fix "All" chip styling
+        if (activeType === 'all') {
+          const allChip = document.querySelector('.type-chip[data-type="all"]');
+          allChip.style.background = '#555';
+          allChip.style.color = '#fff';
+          allChip.style.borderColor = '#aaa';
+        }
+        applyFilters();
+      });
+    });
+
+    // Year inputs
+    document.getElementById('year-from').addEventListener('input', function(e) {
+      yearFrom = e.target.value ? parseInt(e.target.value) : null;
+      applyFilters();
+    });
+    document.getElementById('year-to').addEventListener('input', function(e) {
+      yearTo = e.target.value ? parseInt(e.target.value) : null;
+      applyFilters();
+    });
+  }
+
+  // Run after DOM + jekyll-scholar rendering
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
