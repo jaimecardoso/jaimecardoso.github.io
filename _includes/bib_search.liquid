@@ -1,262 +1,317 @@
-<!-- _includes/bib_search.liquid -->
-<!-- Enhanced publication search & filter with type tags, live count, author/venue/year filtering -->
+{% comment %}_includes/bib_search.liquid{% endcomment %}
 
-<div id="pubfilter-wrapper" style="margin-bottom: 1.5rem;">
+<style>
+/* ── Filter bar ─────────────────────────────────────────── */
+#pub-filter-bar {
+  margin-bottom: 1.4rem;
+  font-size: 0.88rem;
+}
+#pub-filter-bar .pub-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+#pub-filter-bar label {
+  color: #777;
+  margin: 0;
+  white-space: nowrap;
+}
+#pub-search-input {
+  flex: 1 1 200px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  min-width: 0;
+}
+#pub-clear-btn {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  font-family: inherit;
+}
+#pub-clear-btn:hover { background: #e8e8e8; }
 
-  <!-- Search bar -->
-  <div style="display:flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem;">
-    <input
-      id="pubsearch"
-      type="text"
-      placeholder="Search title, author, venue…"
-      style="flex: 1 1 220px; padding: 0.45rem 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem;"
-      aria-label="Search publications"
-    />
-    <button id="pubsearch-clear"
-      style="padding: 0.45rem 0.8rem; border: 1px solid #ccc; border-radius: 4px; background: #f5f5f5; cursor: pointer; font-size: 0.85rem;"
-      title="Clear search">✕ Clear</button>
+/* type chips */
+.pub-type-chip {
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-family: inherit;
+  background: transparent;
+  transition: background 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+.pub-type-chip.active {
+  color: #fff !important;
+  border-color: transparent !important;
+}
+.pub-type-chip[data-type="all"]          { color: #555; border-color: #aaa; }
+.pub-type-chip[data-type="article"]      { color: #1976D2; }
+.pub-type-chip[data-type="inproceedings"]{ color: #388E3C; }
+.pub-type-chip[data-type="book"]         { color: #7B1FA2; }
+.pub-type-chip[data-type="incollection"] { color: #E65100; }
+.pub-type-chip[data-type="techreport"]   { color: #5D4037; }
+.pub-type-chip[data-type="thesis"]       { color: #0288D1; }
+.pub-type-chip[data-type="misc"]         { color: #546E7A; }
+
+.pub-type-chip.active[data-type="all"]           { background: #555; }
+.pub-type-chip.active[data-type="article"]       { background: #1976D2; }
+.pub-type-chip.active[data-type="inproceedings"] { background: #388E3C; }
+.pub-type-chip.active[data-type="book"]          { background: #7B1FA2; }
+.pub-type-chip.active[data-type="incollection"]  { background: #E65100; }
+.pub-type-chip.active[data-type="techreport"]    { background: #5D4037; }
+.pub-type-chip.active[data-type="thesis"]        { background: #0288D1; }
+.pub-type-chip.active[data-type="misc"]          { background: #546E7A; }
+
+/* count */
+#pub-count { font-size: 0.83rem; color: #666; }
+
+/* ── Per-entry type badge (same look as the DOI button) ─── */
+.pub-type-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  text-decoration: none !important;
+  cursor: default;
+  user-select: none;
+  vertical-align: middle;
+  /* match al-folio btn look */
+  border: 1px solid currentColor;
+  line-height: 1.5;
+  margin-right: 2px;
+}
+.pub-type-tag[data-type="article"]      { color: #1976D2; }
+.pub-type-tag[data-type="inproceedings"]{ color: #388E3C; }
+.pub-type-tag[data-type="book"]         { color: #7B1FA2; }
+.pub-type-tag[data-type="incollection"] { color: #E65100; }
+.pub-type-tag[data-type="techreport"]   { color: #5D4037; }
+.pub-type-tag[data-type="thesis"]       { color: #0288D1; }
+.pub-type-tag[data-type="misc"],
+.pub-type-tag[data-type="other"]        { color: #546E7A; }
+
+/* ── BibTeX toggle button (matches DOI btn style) ────────── */
+a.pub-bib-btn {
+  font-size: 0.7rem !important;
+}
+/* Collapsible bibtex block (same as al-folio .abstract.hidden) */
+.pub-bibtex-block {
+  display: none;
+  margin-top: 0.5rem;
+}
+.pub-bibtex-block.open { display: block; }
+.pub-bibtex-block pre {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+</style>
+
+<!-- ── Filter bar markup ──────────────────────────────────────── -->
+<div id="pub-filter-bar">
+
+  <div class="pub-filter-row">
+    <input id="pub-search-input" type="text" placeholder="Search title, author, venue…" aria-label="Search publications" autocomplete="off">
+    <button id="pub-clear-btn">✕ Clear</button>
   </div>
 
-  <!-- Type filter chips -->
-  <div id="type-filters" style="display:flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
-    <span style="font-size:0.82rem; color:#666; align-self:center; margin-right:0.3rem;">Type:</span>
-    <button class="type-chip active" data-type="all"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #aaa; background:#555; color:#fff; cursor:pointer; font-size:0.8rem;">
-      All
-    </button>
-    <button class="type-chip" data-type="article"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #2196F3; color:#2196F3; background:#fff; cursor:pointer; font-size:0.8rem;">
-      Journal
-    </button>
-    <button class="type-chip" data-type="inproceedings"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #4CAF50; color:#4CAF50; background:#fff; cursor:pointer; font-size:0.8rem;">
-      Conference
-    </button>
-    <button class="type-chip" data-type="book"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #9C27B0; color:#9C27B0; background:#fff; cursor:pointer; font-size:0.8rem;">
-      Book
-    </button>
-    <button class="type-chip" data-type="incollection"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #FF9800; color:#FF9800; background:#fff; cursor:pointer; font-size:0.8rem;">
-      Book Chapter
-    </button>
-    <button class="type-chip" data-type="techreport"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #795548; color:#795548; background:#fff; cursor:pointer; font-size:0.8rem;">
-      Technical Report
-    </button>
-    <button class="type-chip" data-type="misc"
-      style="padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #607D8B; color:#607D8B; background:#fff; cursor:pointer; font-size:0.8rem;">
-      Preprint / Other
-    </button>
+  <div class="pub-filter-row">
+    <label>Type:</label>
+    <button class="pub-type-chip active" data-type="all">All</button>
+    <button class="pub-type-chip" data-type="article">Journal</button>
+    <button class="pub-type-chip" data-type="inproceedings">Conference</button>
+    <button class="pub-type-chip" data-type="book">Book</button>
+    <button class="pub-type-chip" data-type="incollection">Book Chapter</button>
+    <button class="pub-type-chip" data-type="techreport">Tech Report</button>
+    <button class="pub-type-chip" data-type="thesis">Thesis</button>
+    <button class="pub-type-chip" data-type="misc">Preprint</button>
   </div>
 
-  <!-- Year range filter -->
-  <div style="display:flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem;">
-    <span style="font-size:0.82rem; color:#666;">Year:</span>
-    <input id="year-from" type="number" placeholder="From" min="1990" max="2030"
-      style="width: 80px; padding: 0.35rem 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.85rem;" />
-    <span style="color:#666;">–</span>
-    <input id="year-to" type="number" placeholder="To" min="1990" max="2030"
-      style="width: 80px; padding: 0.35rem 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.85rem;" />
-  </div>
-
-  <!-- Result count -->
-  <div id="pub-count" style="font-size: 0.85rem; color: #555; margin-bottom: 0.5rem;">
-    Showing <strong id="pub-count-n">…</strong> publications
-  </div>
-
+  <div id="pub-count">Showing <strong id="pub-count-n">…</strong> publications</div>
 </div>
 
+<!-- ── All logic in one self-contained script ─────────────────── -->
 <script>
-(function() {
-  // Type label badge colors (must match CSS above, used for injected badges)
-  const TYPE_META = {
-    article:       { label: "Journal",           color: "#2196F3" },
-    inproceedings: { label: "Conference",         color: "#4CAF50" },
-    book:          { label: "Book",               color: "#9C27B0" },
-    incollection:  { label: "Book Chapter",       color: "#FF9800" },
-    techreport:    { label: "Technical Report",   color: "#795548" },
-    misc:          { label: "Preprint / Other",   color: "#607D8B" },
-  };
+(function () {
+  "use strict";
 
-  function getBadgeHTML(type) {
-    const t = TYPE_META[type] || { label: type, color: "#607D8B" };
-    return `<span class="pub-type-badge" data-type="${type}" style="
-      display:inline-block; padding:2px 8px; border-radius:999px;
-      border:1px solid ${t.color}; color:${t.color}; font-size:0.72rem;
-      font-weight:600; margin-left:6px; vertical-align:middle; white-space:nowrap;
-    ">${t.label}</span>`;
+  /* ── Run after DOM is ready ─────────────────────────────── */
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
   }
 
-  function init() {
-    const pubDiv = document.querySelector('.publications');
-    if (!pubDiv) return;
+  ready(function () {
 
-    // Collect all li items (publications)
-    const allItems = Array.from(pubDiv.querySelectorAll('li'));
+    /* ── 1. Gather every <li> that jekyll-scholar produced.
+            Structure: h2(year) → ol.bibliography → li → div.row → div#key
+            We need the <li> as our filter unit.                   ── */
+    var pubsDiv   = document.querySelector(".publications");
+    if (!pubsDiv) return;
 
-    // Inject type badges & attach data attributes to each li
-    allItems.forEach(function(li) {
-      // Try to get type from data-bib-type attribute (al-folio sets this)
-      // Fallback: infer from context
-      let type = li.getAttribute('data-bib-type') || '';
+    var allLi = Array.from(pubsDiv.querySelectorAll("ol.bibliography > li"));
+    if (!allLi.length) return;
 
-      // al-folio wraps with class like "article", "inproceedings", etc. on the li or parent
-      if (!type) {
-        const cls = li.className || '';
-        const parentCls = (li.parentElement || {}).className || '';
-        const combined = cls + ' ' + parentCls;
-        for (const t of Object.keys(TYPE_META)) {
-          if (combined.toLowerCase().includes(t)) { type = t; break; }
-        }
+    /* ── 2. For each <li>, read the hook's hidden meta div,
+            stamp data attributes onto the <li>, inject type badge
+            and BibTeX button into the .links div.                  ── */
+    allLi.forEach(function (li) {
+
+      var meta = li.querySelector(".pub-meta-hook");
+      if (!meta) return;
+
+      var typeKey   = meta.getAttribute("data-type-key")   || "other";
+      var typeLabel = meta.getAttribute("data-type-label") || "Other";
+      var entryKey  = meta.getAttribute("data-entry-key")  || "";
+      var entryYear = meta.getAttribute("data-entry-year") || "0";
+
+      /* stamp the <li> for filtering */
+      li.setAttribute("data-pub-type", typeKey);
+      li.setAttribute("data-pub-year", entryYear);
+      li.setAttribute("data-pub-text", li.textContent.toLowerCase());
+
+      /* ── type badge: prepend to .links div ── */
+      var linksDiv = li.querySelector(".links");
+      if (linksDiv) {
+        var badge = document.createElement("a");
+        badge.className = "pub-type-tag btn btn-sm z-depth-0";
+        badge.setAttribute("data-type", typeKey);
+        badge.setAttribute("role", "button");
+        badge.textContent = typeLabel;
+        badge.style.cursor = "default";
+        linksDiv.insertBefore(badge, linksDiv.firstChild);
       }
 
-      // Store type on the element
-      li.setAttribute('data-pub-type', type || 'misc');
+      /* ── BibTeX toggle button + collapsible block ── */
+      var bibScript = li.querySelector(".pub-raw-bibtex");
+      if (bibScript && linksDiv) {
+        var rawBib = bibScript.textContent.trim();
 
-      // Find year from the nearest h2 (year heading)
-      let yearHeading = li.closest('ol, ul');
-      let prevEl = yearHeading ? yearHeading.previousElementSibling : null;
-      while (prevEl && prevEl.tagName !== 'H2') {
-        prevEl = prevEl.previousElementSibling;
-      }
-      const year = prevEl ? parseInt(prevEl.textContent.trim()) : 0;
-      li.setAttribute('data-pub-year', year);
+        /* button */
+        var bibBtn = document.createElement("a");
+        bibBtn.className = "pub-bib-btn btn btn-sm z-depth-0";
+        bibBtn.setAttribute("role", "button");
+        bibBtn.textContent = "Bib";
+        linksDiv.appendChild(bibBtn);
 
-      // Grab text for full-text search
-      li.setAttribute('data-pub-text', li.textContent.toLowerCase());
+        /* collapsible block */
+        var bibBlock = document.createElement("div");
+        bibBlock.className = "pub-bibtex-block";
+        var pre = document.createElement("pre");
+        pre.textContent = rawBib;
+        bibBlock.appendChild(pre);
 
-      // Inject badge after title (first <span> or just prepend to li content area)
-      if (type && !li.querySelector('.pub-type-badge')) {
-        // Find best insertion point: after title link or at start of the entry div
-        const titleEl = li.querySelector('.title') || li.querySelector('span.title') || li.querySelector('a');
-        if (titleEl) {
-          titleEl.insertAdjacentHTML('afterend', getBadgeHTML(type));
-        } else {
-          li.insertAdjacentHTML('afterbegin', getBadgeHTML(type));
+        /* insert block after the main col div */
+        var colDiv = li.querySelector("[id='" + entryKey + "']");
+        if (colDiv) {
+          colDiv.appendChild(bibBlock);
         }
+
+        /* toggle on click */
+        bibBtn.addEventListener("click", function () {
+          var open = bibBlock.classList.toggle("open");
+          bibBtn.classList.toggle("active", open);
+        });
       }
     });
 
-    // --- Filter logic ---
-    let activeType = 'all';
-    let searchText = '';
-    let yearFrom = null;
-    let yearTo = null;
+    /* ── 3. Filter state ──────────────────────────────────── */
+    var activeType  = "all";
+    var searchText  = "";
 
+    /* ── 4. Apply filters: show/hide <li>s, then hide empty
+            h2+ol year sections.                               ── */
     function applyFilters() {
-      let visible = 0;
-      allItems.forEach(function(li) {
-        const t = li.getAttribute('data-pub-type') || 'misc';
-        const y = parseInt(li.getAttribute('data-pub-year') || '0');
-        const txt = li.getAttribute('data-pub-text') || '';
+      var visible = 0;
 
-        const typeMatch = activeType === 'all' || t === activeType;
-        const textMatch = !searchText || txt.includes(searchText);
-        const yearFromMatch = !yearFrom || y >= yearFrom;
-        const yearToMatch = !yearTo || y <= yearTo;
+      allLi.forEach(function (li) {
+        var t   = li.getAttribute("data-pub-type") || "other";
+        var txt = li.getAttribute("data-pub-text") || "";
 
-        const show = typeMatch && textMatch && yearFromMatch && yearToMatch;
-        li.style.display = show ? '' : 'none';
+        var typeOk   = (activeType === "all") || (t === activeType);
+        var searchOk = !searchText || txt.indexOf(searchText) !== -1;
+
+        var show = typeOk && searchOk;
+        li.style.display = show ? "" : "none";
         if (show) visible++;
       });
 
-      // Hide year h2 headings that have no visible children
-      pubDiv.querySelectorAll('h2').forEach(function(h2) {
-        let next = h2.nextElementSibling;
-        let hasVisible = false;
-        while (next && next.tagName !== 'H2') {
-          if (next.tagName === 'OL' || next.tagName === 'UL') {
-            const lis = Array.from(next.querySelectorAll('li'));
-            if (lis.some(function(l) { return l.style.display !== 'none'; })) {
-              hasVisible = true;
-            }
+      /* hide year h2 headings whose following ol has no visible <li> */
+      var nodes = Array.from(pubsDiv.children);
+      var i = 0;
+      while (i < nodes.length) {
+        var node = nodes[i];
+        if (node.tagName === "H2") {
+          /* find the ol that follows this h2 */
+          var ol = null;
+          var j = i + 1;
+          while (j < nodes.length && nodes[j].tagName !== "H2") {
+            if (nodes[j].tagName === "OL") { ol = nodes[j]; break; }
+            j++;
           }
-          next = next.nextElementSibling;
+          if (ol) {
+            var hasVisible = Array.from(ol.querySelectorAll("li"))
+                               .some(function (li) { return li.style.display !== "none"; });
+            node.style.display = hasVisible ? "" : "none";
+            ol.style.display   = hasVisible ? "" : "none";
+          }
         }
-        h2.style.display = hasVisible ? '' : 'none';
-      });
+        i++;
+      }
 
-      document.getElementById('pub-count-n').textContent = visible;
+      document.getElementById("pub-count-n").textContent = visible;
     }
 
-    // Initial count
-    setTimeout(function() {
-      document.getElementById('pub-count-n').textContent = allItems.length;
-    }, 100);
+    /* initial count (brief delay so DOM is fully painted) */
+    setTimeout(function () {
+      document.getElementById("pub-count-n").textContent = allLi.length;
+    }, 50);
 
-    // Search input
-    document.getElementById('pubsearch').addEventListener('input', function(e) {
-      searchText = e.target.value.trim().toLowerCase();
+    /* ── 5. Wire up controls ─────────────────────────────── */
+
+    /* search */
+    document.getElementById("pub-search-input").addEventListener("input", function () {
+      searchText = this.value.trim().toLowerCase();
       applyFilters();
     });
 
-    // Clear button
-    document.getElementById('pubsearch-clear').addEventListener('click', function() {
-      document.getElementById('pubsearch').value = '';
-      searchText = '';
-      document.getElementById('year-from').value = '';
-      document.getElementById('year-to').value = '';
-      yearFrom = null;
-      yearTo = null;
-      activeType = 'all';
-      document.querySelectorAll('.type-chip').forEach(function(c) {
-        c.classList.remove('active');
-        c.style.background = c.style.background.includes('555') ? '#f5f5f5' : '#fff';
-        c.style.color = c.getAttribute('data-type') === 'all' ? '#555' : '';
+    /* clear */
+    document.getElementById("pub-clear-btn").addEventListener("click", function () {
+      document.getElementById("pub-search-input").value = "";
+      searchText = "";
+      activeType = "all";
+      document.querySelectorAll(".pub-type-chip").forEach(function (c) {
+        c.classList.toggle("active", c.getAttribute("data-type") === "all");
       });
-      document.querySelector('.type-chip[data-type="all"]').classList.add('active');
-      document.querySelector('.type-chip[data-type="all"]').style.background = '#555';
-      document.querySelector('.type-chip[data-type="all"]').style.color = '#fff';
       applyFilters();
     });
 
-    // Type chips
-    document.querySelectorAll('.type-chip').forEach(function(chip) {
-      chip.addEventListener('click', function() {
-        activeType = chip.getAttribute('data-type');
-        document.querySelectorAll('.type-chip').forEach(function(c) {
-          const ct = c.getAttribute('data-type');
-          const meta = TYPE_META[ct];
-          if (c === chip) {
-            c.classList.add('active');
-            c.style.background = meta ? meta.color : '#555';
-            c.style.color = '#fff';
-            c.style.borderColor = meta ? meta.color : '#555';
-          } else {
-            c.classList.remove('active');
-            c.style.background = '#fff';
-            c.style.color = meta ? meta.color : '#555';
-            c.style.borderColor = meta ? meta.color : '#aaa';
-          }
+    /* type chips */
+    document.querySelectorAll(".pub-type-chip").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        activeType = chip.getAttribute("data-type");
+        document.querySelectorAll(".pub-type-chip").forEach(function (c) {
+          c.classList.toggle("active", c === chip);
         });
-        // Fix "All" chip styling
-        if (activeType === 'all') {
-          const allChip = document.querySelector('.type-chip[data-type="all"]');
-          allChip.style.background = '#555';
-          allChip.style.color = '#fff';
-          allChip.style.borderColor = '#aaa';
-        }
         applyFilters();
       });
     });
 
-    // Year inputs
-    document.getElementById('year-from').addEventListener('input', function(e) {
-      yearFrom = e.target.value ? parseInt(e.target.value) : null;
-      applyFilters();
-    });
-    document.getElementById('year-to').addEventListener('input', function(e) {
-      yearTo = e.target.value ? parseInt(e.target.value) : null;
-      applyFilters();
-    });
-  }
-
-  // Run after DOM + jekyll-scholar rendering
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
+  }); /* end ready */
+}());
 </script>
