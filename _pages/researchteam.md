@@ -13,7 +13,7 @@ My research focuses on robust, interpretable, and trustworthy machine learning, 
 For over two decades, I have pursued a unified scientific objective: to build machine learning systems that can reason from visual data in a robust, interpretable, and verifiable manner. My work spans fundamental methodology, system level integration, and deployment-oriented research, aiming to ensure that machine learning models remain reliable, transparent, and accountable when operating beyond idealised benchmark conditions.
 </p>
 
-<h3>[VCMI](https://vcmi.inesctec.pt/) Timeline</h3>								
+<h3><a target="_blank" href="https://vcmi.inesctec.pt/">VCMI</a> Timeline</h3>								
 <ol reversed>									
 <li>2024. Ana Filipa Sequeira takes over the leadership of VCMI.</li>
 <li>2022?. Over time, VCMI and IPPR become indistinguishable. Now VCMI replaces IPPR as the formal Area of CTM.</li>
