@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Full Professor at DEEC, in the [Faculdade de Engenharia da Universidade do Porto (FEUP)](http://www.fe.up.pt/), Portugal.
+I am a [Full Professor](https://sigarra.up.pt/feup/en/FUNC_GERAL.FORMVIEW?p_codigo=367235) at DEEC, in the [Faculdade de Engenharia da Universidade do Porto (FEUP)](http://www.fe.up.pt/), Portugal.
 
 Simultaneously, I'm also involved in research and development activities at [INESC TEC](http://www.inesctec.pt/) in the Centre for Telecommunications and Multimedia. At INESC TEC, I am the co-founder of the Breast Research Group and of the [Visual Computing and Machine Intelligence Group](http://vcmi.inesctec.pt/). At VCMI we focus our research on computer vision and pattern recognition.
 
@@ -43,7 +43,6 @@ Learn [here](https://study-research.pt/) why you should learn and do research in
 <a href="https://www.semanticscholar.org/author/Jaime-S-Cardoso/3698192" target="_blank">Semantic Scholar</a>
 <br> 
 <a href="https://dblp.org/pid/65/5236" target="_blank">DBLP</a>
-<!-- https://dblp.org/pid/65/5236 -->
 <br> 										
 <a href="https://www.authenticus.pt/R-000-6H2" target="_blank">Authenticus</a>
 <br>
