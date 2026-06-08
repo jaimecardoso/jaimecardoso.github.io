@@ -70,12 +70,14 @@
 .pub-type-chip[data-type="article"]       { color: #1976D2; }
 .pub-type-chip[data-type="inproceedings"] { color: #388E3C; }
 .pub-type-chip[data-type="book"]          { color: #7B1FA2; }
+.pub-type-chip[data-type="inbook"]        { color: #A27B1F; }
 .pub-type-chip[data-type="other"]         { color: #7a7a7a; }
 
 .pub-type-chip.active[data-type="all"]           { background: #555; }
 .pub-type-chip.active[data-type="article"]       { background: #1976D2; }
 .pub-type-chip.active[data-type="inproceedings"] { background: #388E3C; }
 .pub-type-chip.active[data-type="book"]          { background: #7B1FA2; }
+.pub-type-chip.active[data-type="inbook"]        { background: #A27B1F; }
 .pub-type-chip.active[data-type="other"]         { background: #7a7a7a; }
 
 /* count */
@@ -99,6 +101,7 @@
 .pub-type-tag[data-type="article"]       { color: #1976D2; }
 .pub-type-tag[data-type="inproceedings"] { color: #388E3C; }
 .pub-type-tag[data-type="book"]          { color: #7B1FA2; }
+.pub-type-tag[data-type="inbook"]        { color: #A27B1F; }
 .pub-type-tag[data-type="other"]         { color: #7a7a7a; }
 
 /* ── BibTeX toggle ──────────────────────────────────────────── */
@@ -153,6 +156,7 @@ li.pub-entry {
     <button class="pub-type-chip" data-type="article">Journal</button>
     <button class="pub-type-chip" data-type="inproceedings">Conference</button>
     <button class="pub-type-chip" data-type="book">Book</button>
+    <button class="pub-type-chip" data-type="inbook">Chapter</button>	
     <button class="pub-type-chip" data-type="other">Other</button>
   </div>
 
@@ -174,7 +178,7 @@ li.pub-entry {
   "use strict";
 
   /* Types that have their own chip; everything else → "other" */
-  var KNOWN_TYPES = { article: true, inproceedings: true, book: true };
+  var KNOWN_TYPES = { article: true, inproceedings: true, book: true, inbook: true };
 
   function canonicalType(raw) {
     return KNOWN_TYPES[raw] ? raw : "other";
