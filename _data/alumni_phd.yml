@@ -1,0 +1,230 @@
+- name: "Leonardo Gomes Capozzi"
+  start: 2020
+  end: 2026
+  role: "FEUP (co-supervisor)"
+  title: "Human-Centric Sensing and Understanding Using Vision and Wi-Fi Signals"
+
+- name: "Isabel Cristina Rio-Torto de Oliveira"
+  start: 2020
+  end: 2026
+  role: "FCUP (co-supervisor)"
+  title: "Weakly Supervised Multimodal Explanations for Medical Image Classification"
+  link: "https://hdl.handle.net/10216/174479"
+
+- name: "Pedro David Carneiro Neto"
+  start: 2020
+  end: 2025
+  role: "FEUP (co-supervisor)"
+  title: "Explainability, Fairness and Privacy in AI for Biometrics"
+  link: "https://hdl.handle.net/10216/169904"
+
+- name: "Tiago Filipe Sousa Gonçalves"
+  start: 2020
+  end: 2025
+  role: "FEUP (supervisor)"
+  title: "Interpretable Machine Learning and its Application to Medical Decision Support Systems"
+  link: https://hdl.handle.net/10216/167560
+
+- name: "Diana Leitão Montezuma Pego Felizardo"
+  start: 2020
+  end: 2025
+  role: "ICBAS (supervisor)"
+  title: "A new vision in Pathology: From clinical implementation of Digital Pathology to algorithm development in Computational Pathology"
+  link: "https://hdl.handle.net/10216/165284"
+
+- name: "Maxime Dumont"
+  start: 2021
+  end: 2024
+  role: "Aix-Marseille Université (co-supervisor)"
+  title: "Deep Learning pour le phasage de télescope segmenté. Analyse de front d'onde en plan focal pour télescope spatial : application au phasage d’un Cubesat deployable pour l'observation de la Terre."
+
+- name: "Tomé Mendes Albuquerque"
+  start: 2019
+  end: 2024
+  role: "FEUP (supervisor)"
+  title: "Multimodal Cervical Cancer Diagnosis: Deep Learning for Automatic Decision Support"
+  link: "https://hdl.handle.net/10216/157991"
+        
+- name: "Eduardo Meca Castro"
+  start: 2018
+  end: 2023
+  role: "FEUP (co-supervisor)"
+  title: "Deep Learning based Computer Aided Diagnosis for Breast Cancer Screening"
+  link: "https://hdl.handle.net/10216/152826"
+
+- name: "João Tiago Ribeiro Pinto"
+  start: 2018
+  end: 2022
+  role: "FEUP (supervisor)"
+  title: "Seamless Multimodal Biometrics for Continuous Personalised Wellbeing Monitoring"
+  link: "https://hdl.handle.net/10216/147121"
+
+- name: "Wilson José dos Santos Silva"
+  start: 2017
+  end: 2022
+  role: "FEUP (supervisor)"
+  title: "Deep Aesthetic Assessment of Breast Cancer Surgery Outcomes"
+  link: "https://hdl.handle.net/10216/147108"
+
+- name: "Sara Isabel Pires de Oliveira"
+  start: 2018
+  end: 2022
+  role: "FEUP (co-supervisor)"  
+  title: "Cancer diagnosis in digital pathology: learning from label scarcity"
+  link: "https://hdl.handle.net/10216/147109"	
+  
+- name: "Ana Filipa Domingues Geros"
+  start: 2016
+  end: 2022
+  role: "FEUP (co-supervisor)"
+  title: "Novel Tools for Quantification and Automatic Classification of Behavior in Laboratory Animals - Advancing Computational Ethology"
+  link: "https://hdl.handle.net/10216/143076"
+
+- name: "Ricardo Jorge Terroso de Araujo"
+  start: 2016
+  end: 2021
+  role: "FCUP (co-supervisor)"  
+  title: "Computer vision for blood vessel segmentation and related applications"
+  link: "https://hdl.handle.net/10216/139149"			
+
+- name: "Diogo Pernes da Cunha"
+  start: 2017
+  end: 2021
+  role: "FCUP (supervisor)"  
+  title: "Learning from multi-entity data"
+  link: "https://hdl.handle.net/10216/138474"			
+
+- name: "Sílvia da Conceição Neto Bessa"
+  start: 2016
+  end: 2021
+  role: "FEUP (co-supervisor)"  
+  title: "Personalized 3D Breast Cancer Models: from Multimodal Registration to Predictive Shape Modelling"
+  link: "https://hdl.handle.net/10216/136835"	
+
+- name: "Ricardo Pereira de Magalhães Cruz"
+  start: 2016
+  end: 2021
+  role: "FEUP (supervisor)"  
+  title: "Rethinking a Deep Learning Pipeline for Images"
+  link: "https://hdl.handle.net/10216/134687"	
+
+- name: "Joana Raquel Cerqueira da Silva"
+  start: 2015
+  end: 2020
+  role: "FEUP (supervisor)"  
+  title: "Machine Learning Applied to Fall Prediction and Detection Using Wearable Sensors"
+  link: "https://hdl.handle.net/10216/131026"												
+
+- name: "Pedro Miguel Martins Ferreira"
+  start: 2015
+  end: 2020
+  role: "FEUP (co-supervisor)"  
+  title: "Sign Language Recognition: Integrating Prior Domain Knowledge into Deep Neural Networks"
+  link: "https://hdl.handle.net/10216/126550"
+  
+- name: "Anisa Allahdadidastjerdi"
+  start:  2012
+  end: 2020
+  role: "FEUP (co-supervisor)"  
+  title: "Performance Anomaly Detection in 802.11 Wireless Networks Applying Hidden Markov Models"
+  link: "https://hdl.handle.net/10216/126613"		
+
+- name: "Kelwin Alexander Fernandes Correia"
+  start: 2014
+  end: 2018
+  role: "FEUP (supervisor)"  
+  title: "Fundamental Topics in Machine Intelligence and their Application to Digital Colposcopy"
+  link: "https://hdl.handle.net/10216/118505"
+  
+- name: "Luis Filipe Caeiro Margalho Guerra Rosado"
+  start: 2013 
+  end: 2018
+  role: "FEUP (supervisor)"  
+  title: "Computer-aided Detection of Malaria Parasites"
+  link: "https://hdl.handle.net/10216/116876"
+
+- name: "Hooshiar Zolfagharnasab"
+  start: 2012
+  end: 2018
+  role: "FEUP (co-supervisor)"  
+  title: "Toward a 3D Planning Approach for Breast Conserving Surgery"
+  link: "http://hdl.handle.net/10216/114376"
+  
+- name: "João Carlos de Sousa Monteiro"
+  start: 2012
+  end: 2017
+  role: "FEUP (supervisor)"  
+  title: "Multimodal Biometric Recognition Under Unconstrained Settings"
+  link: "http://hdl.handle.net/10216/106951"			
+
+- name: "Samaneh Khoshrou"
+  start: 2011
+  end: 2017
+  role: "FEUP (supervisor)"  
+  title: "Learning in Evolving Video Streams"
+  link: "http://hdl.handle.net/10216/90876"				
+
+- name: "Chetak Kandaswamy"
+  start: 2013
+  end: 2016
+  role: "FEUP (supervisor)"  
+  title: "Contributions on Deep Transfer Learning"
+  link: "http://hdl.handle.net/10216/85509"		
+
+- name: "Eduardo José Marques Pereira"
+  start: 2011
+  end: 2016
+  role: "FEUP (supervisor)"  
+  title: "Humans in Action at Different Levels: the group, the whole and the parts"
+  link: "http://hdl.handle.net/10216/84428"
+  
+
+- name: "Ana Filipa Pinheiro Sequeira"
+  start: 2011
+  end: 2015
+  role: "FEUP (supervisor)"  
+  title: "Liveness Detection and Robust Recognition in Iris and Fingerprint Biometric Systems"
+  link: "http://hdl.handle.net/10216/81992"
+  
+  
+- name: "Ines Campos Monteiro Sabino Domingues"
+  start: 2009
+  end: 2015
+  role: "FEUP (supervisor)"  
+  title: "An automatic mammogram system: from screening to diagnosis"
+  link: "http://hdl.handle.net/10216/78922"
+        
+- name: "Andre Miguel Passos Baltazar"
+  start: 2009
+  end: 2015
+  role: "Escola das Artes, Univ. Catolica (co-supervisor)"
+  title: "Zatlab: Recognizing gestures for artistic performance interaction"
+  link: "http://hdl.handle.net/10400.14/16712"	
+    
+- name: "Helder Filipe Pinto de Oliveira"
+  start: 2008
+  end: 2013
+  role: "FEUP (supervisor)"
+  title: "An Affordable and Practical 3D Solution for the Aesthetic Evaluation of Breast Cancer Conservative Treatment"
+  link: "http://hdl.handle.net/10216/67063"	
+  
+- name: "Ana Maria Silva Rebelo"
+  start: 2008
+  end: 2012
+  role: "FEUP (supervisor)"
+  title: "Robust Optical Recognition of Handwritten Musical Scores based on Domain Knowledge"
+  link: "http://hdl.handle.net/10216/73213"		
+
+- name: "Ricardo Jorge Gamelas de Sousa"
+  start: 2008
+  end: 2012
+  role: "FEUP (supervisor)"
+  title: "Multicriteria learning on ordinal data"
+  link: "http://hdl.handle.net/10216/68386"
+
+- name: "Pedro Miguel Machado Soares Carvalho"
+  start: 2007
+  end: 2012
+  role: "FEUP (co-supervisor)"
+  title: "Video Object Tracking - Contributions to Object Description and Performance Assessment"
+  link: "http://hdl.handle.net/10216/65990"

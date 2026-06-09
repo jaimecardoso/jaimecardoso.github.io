@@ -1,0 +1,216 @@
+- name: "José Miguel Pires Teixeira"
+  year: 2025
+  role: "FEUP (supervisor)"
+  title: "AI-driven Virtual Immuno Staining"
+
+- name: "Mafalda Bastos da Costa"
+  year: 2025
+  role: "FEUP (supervisor)"
+  title: "Interpretable Ordinal Scorecards"
+
+- name: "Manuel Amorim"
+  year: 2025
+  role: "FEUP (co-supervisor)"
+  title: "Kolmogorov-Arnold Networks"
+
+- name: "Maria José Valente da Silva Carneiro"
+  year: 2024
+  role: "FEUP (supervisor)"
+  title: "Digital Pathology Quality Control"
+  link: "https://hdl.handle.net/10216/161069"
+
+- name: "Pedro Fernandes Sousa"
+  year: 2023
+  role: "FEUP (supervisor)"
+  title: "Conditional Generation of Diffusion MR Images"
+  link: "https://hdl.handle.net/10216/153875"
+
+- name: "Inês Rodrigues Campos"
+  year: 2023
+  role: "FEUP (supervisor)"
+  title: "Knee Osteoarthritis Prediction"
+  link: "https://hdl.handle.net/10216/153172"
+
+- name: "Mariana Margalho Alves"
+  year: 2023
+  role: "FEUP (co-supervisor)"
+  title: "Explainable AI"
+  link: "https://hdl.handle.net/10216/153476"
+
+- name: "Cláudia Ribeiro"
+  year: 2023
+  role: "FEUP (supervisor)"
+  title: "Lane Estimation"
+  link: "https://hdl.handle.net/10216/151989"
+
+- name: "Arthur Johas Matta"
+  year: 2020
+  role: "FEUP (supervisor)"
+  title: "Open-World Face Recognition"
+  link: "https://hdl.handle.net/10216/130042"
+
+- name: "Francisca Morgado"
+  year: 2019
+  role: "FEUP (supervisor)"
+  title: "Cervical Cancer Screening Tools"
+  link: "https://hdl.handle.net/10216/123068"
+
+- name: "João Soares Sousa"
+  year: 2019
+  role: "FEUP (supervisor)"
+  title: "Waste Sorting with Deep Learning"
+  link: "https://hdl.handle.net/10216/121363"
+
+- name: "Guilherme de Oliveira Santos"
+  year: 2018
+  role: "FEUP (supervisor)"
+  title: "Automotive Interior Sensing"
+  link: "http://hdl.handle.net/10216/114061"
+
+- name: "Tiago Salgado Magalhães"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Reinforcement Learning for Scheduling"
+  link: "http://hdl.handle.net/10216/108395"
+
+- name: "Ricardo Reis Marques Silva"
+  year: 2016
+  role: "FEUP (supervisor)"
+  title: "Measuring Impedance in Congestive Heart Failure"
+  link: "http://hdl.handle.net/10216/85148"
+
+- name: "Ana Filipa Domingues Geros"
+  year: 2015
+  role: "FEUP (co-supervisor)"
+  title: "Capture and analysis of the trajectories of anatomical points on the face to support and evaluate reconstructive plastic surgery"
+  link: "http://hdl.handle.net/10216/79460"
+
+
+
+
+
+
+- name: "Joao Paulo da Silva Ferreira Monteiro"
+  year: 2011
+  role: "FEUP (supervisor)"
+  title: "Computer Aided Detection in Mammography"
+
+- name: "Igor Francisco Areias Amaral"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Content-Based Image Retrieval for Medical Applications"
+
+- name: "Jose Graciano Almeida Ramos"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Algoritmos Colaborativos para Sistemas de Recomendacao"
+
+- name: "Telmo Tiago Barbosa Pinto"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Music Score Binarization Based on Content Knowledge"
+
+- name: "Ezilda Duarte Almeida"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Classificacao Ordinal com Opcao de Rejeição"
+
+- name: "Luis Alberto de Sousa Rangel das Neves"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Sistema Web Semi-automatico para Anotacao Colaborativa de Media H.264 e Flash Video"
+
+- name: "Andreas Dieter Mendes Seufert"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Investigacao e Aperfeicoamento de Algoritmos de Reconhecimento de Simbolos Musicais"
+
+- name: "Pedro Augusto Fernandes Antunes Martins Vitoriano"
+  year: 2010
+  role: "FEUP (supervisor)"
+  title: "Avaliacao Automatica do Resultado de Intervencoes Cirurgicas"
+
+- name: "Rui Alexandre Rodrigues Carneiro"
+  year: 2009
+  role: "FEUP (supervisor)"
+  title: "Unificação e expansão da interface de pesquisa no webmail"
+
+- name: "Marcia dos Santos Pinheiro"
+  year: 2009
+  role: "FEUP (supervisor)"
+  title: "Sistema Web para o Reconhecimento de Partituras Musicais"
+
+- name: "Sergio Manuel Colaco de Sá"
+  year: 2009
+  role: "FEUP (supervisor)"
+  title: "Adaptacao Preditiva de Conteudo Multimedia"
+
+- name: "Andre Miguel Passos Baltazar"
+  year: 2009
+  role: "FEUP (supervisor)"
+  title: "Extraccao de Informacoes Ritmicas de Movimentos de Danca Atraves de um Sinal de Video"
+
+- name: "Pedro Luis Cameira Sollari Allegro"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "Singing Voice Detection in Polyphonic Music Signals"
+
+- name: "Luis Daniel Torres Rebelo"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "Avaliacao objectiva do resultado estetico dos tratamentos do cancro da mama"
+
+- name: "Luis Miguel Marques Soeiro Batista"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "Sistema automatico de reconhecimento de formularios manuscritos"
+
+- name: "Luis Jorge Trindade Certo"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "QuidPyx mobile - Sistema de recomendação de musica em dispositivos moveis"
+
+- name: "Joao Carlos Loureiro de Jesus Oliveira"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "A Smarter YouTube - Sistema de organizacao automatica de video com base no seu conteudo semantico"
+
+- name: "Ana Maria Silva Rebelo"
+  year: 2008
+  role: "FCUP (supervisor)"
+  title: "New methodologies towards an automatic optical recognition of handwritten musical scores"
+
+- name: "Ricardo Gamelas de Sousa"
+  year: 2008
+  role: "FCUP (supervisor)"
+  title: "Automatic aesthetic evaluation of breast cancer conservative treatment"
+
+- name: "Guilherme Artur Conceicao Capela"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "Reconhecimento de simbolos musicais manuscritos na framework Gamera"
+
+- name: "Filipe Emanuel Amaro Coelho"
+  year: 2008
+  role: "FEUP (supervisor)"
+  title: "Sistema automatico de reconhecimento do montante de um cheque"
+
+- name: "Guilherme Artur Conceicao Capela"
+  year: 2007
+  role: "FEUP (co-supervisor)"
+  title: "Sistema automático de reconhecimento de pautas musicais manuscritas"
+  note: "undergraduate"
+
+- name: "Ana Maria Silva Rebelo"
+  year: 2007
+  role: "FEUP (co-supervisor)"
+  title: "Reconhecimento automático de pautas musicais manuscritas"
+  note: "undergraduate"
+
+- name: "Silvia Maria Faria Saramago"
+  year: 2003
+  role: "FEUP (co-supervisor)"
+  title: "Extração 3D da estrutura da cena e dos parâmetros da câmara"
+  note: "undergraduate"
+
+  

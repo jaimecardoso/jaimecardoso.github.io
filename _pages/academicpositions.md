@@ -1,88 +1,74 @@
 ---
 layout: page
-permalink: /professional timeline/
+permalink: /professional-timeline/
 title: timeline
 description: professional timeline
 nav: true
 nav_order: 2
 ---
-<ul class="ul-dates">
-	<li>
-		<div class="dates">
-			<span>Present</span>
-			<span>2020</span>
-		</div>
-		<div class="content">
-			<h4>Full Professor</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-		</div>
-	</li>										
-	<li>
-		<div class="dates">
-			<span>2020</span>
-			<span>2015</span>
-		</div>
-		<div class="content">
-			<h4>Associate Professor with Habilitation</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-		</div>
-	</li>
-	<li>
-		<div class="dates">
-			<span>2015</span>
-			<span>2014</span>
-		</div>
-		<div class="content">
-			<h4>Assistant Professor with Habilitation</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-		</div>
-	</li>
-	<li>
-		<div class="dates">
-			<span>2014</span>
-			<span>2009</span>
-		</div>
-		<div class="content">
-			<h4>Assistant Professor</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-		</div>
-	</li>
-	<li>
-		<div class="dates">
-			<span>2009</span>
-			<span>2006</span>
-		</div>
-		<div class="content">
-			<h4>Invited Assistant Professor</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-		</div>
-	</li>
-	<li>
-		<div class="dates">
-			<span>2006</span>
-		</div>
-		<div class="content">
-			<h4>Ph.D. in ECE (Computer Vision)</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-      <p>Title of the thesis: "Metadata Assisted Image Segmentation"</p>      
-		</div>
-	</li>
-	<li>
-		<div class="dates">
-			<span>2005</span>
-		</div>
-		<div class="content">
-			<h4>Master in Mathematical Engineering</h4>
-			<p><em>University of Porto</em>, Faculty of Sciences</p>
-		</div>
-	</li>  
-	<li>
-		<div class="dates">
-			<span>1999</span>
-		</div>
-		<div class="content">
-			<h4>Licentiate (5-year Licenciatura) in ECE</h4>
-			<p><em>University of Porto</em>, Faculty of Engineering</p>
-		</div>
-	</li>   
-</ul>  
+
+## Professional Timeline
+
+<div style="margin-top: 20px;">
+
+<!-- Entry -->
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">Present – 2020</div>
+  <div><strong>Full Professor</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">2020 – 2015</div>
+  <div><strong>Associate Professor with Habilitation</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">2015 – 2014</div>
+  <div><strong>Assistant Professor with Habilitation</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">2014 – 2009</div>
+  <div><strong>Assistant Professor</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">2009 – 2006</div>
+  <div><strong>Invited Assistant Professor</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+</div>
+
+</div>
+
+---
+
+## Education
+
+<div style="margin-top: 20px;">
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">2006</div>
+  <div><strong>Ph.D. in Electrical and Computer Engineering (Computer Vision)</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+  <div style="font-size: 0.95em; color: #555;">
+    Thesis: "Metadata Assisted Image Segmentation"
+  </div>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">2005</div>
+  <div><strong>Master in Mathematical Engineering</strong></div>
+  <div><em>University of Porto</em>, Faculty of Sciences</div>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <div style="font-weight: 600; color: #4c72b0;">1999</div>
+  <div><strong>Licentiate in Electrical and Computer Engineering</strong></div>
+  <div><em>University of Porto</em>, Faculty of Engineering</div>
+</div>
+
+</div>

@@ -6,41 +6,89 @@ description: research statement and members of the lab or group
 nav: true
 nav_order: 7
 ---
-<h3>Research Statement</h3>		
-<p>						
-My research focuses on robust, interpretable, and trustworthy machine learning, with an emphasis on learning under real world constraints such as distribution shift, class imbalance, weak or unreliable supervision, and privacy requirements. I have developed a sustained research agenda at the intersection of robust learning, uncertainty awareness, and explainability, motivated by high stakes domains including medical decision support, biometrics, and safety critical vision systems.</p>
-<p>
-For over two decades, I have pursued a unified scientific objective: to build machine learning systems that can reason from visual data in a robust, interpretable, and verifiable manner. My work spans fundamental methodology, system level integration, and deployment-oriented research, aiming to ensure that machine learning models remain reliable, transparent, and accountable when operating beyond idealised benchmark conditions.
-</p>
 
-<h3><a target="_blank" href="https://vcmi.inesctec.pt/">VCMI</a> Timeline</h3>								
-<ol reversed>									
-<li>2024. Ana Filipa Sequeira takes over the leadership of VCMI.</li>
-<li>2022?. Over time, VCMI and IPPR become indistinguishable. Now VCMI replaces IPPR as the formal Area of CTM.</li>
-<li>2016?. Helder Oliveira takes over the leadership of VCMI (and IPPR).</li>																					
-<li>2012. The IPPR (Information Processing and Pattern Recognition) Area was created at CTM,
-with VCMI as the main research group of IPPR. I was appointed Leader of the IPPR Area.</li>		
-<li>2011. VCMI was established as a research group within the MCT Area of CTM, under the leadership of Jaime Cardoso. Since 2006, I have been leading a small group of students (PhD and Masters) and researchers, as well as acting as PI in research projects, but it was not until 2011 that the name <a target="_blank" href="/asset/proposal for the Group Name.pdf">VCMI was coined</a>, the website and the <a target="_blank" href="/asset/mailingList.png">mailing list were created</a>.
-</li>	
-</ol>
+## Research Statement
 
+<div style="margin-bottom: 20px; padding: 12px 16px; border-left: 4px solid #4c72b0; background-color: #f8f9fa;">
+  My research focuses on <strong>robust, interpretable, and trustworthy machine learning</strong>, particularly under
+  real-world constraints such as distribution shift, class imbalance, weak supervision, and privacy requirements.
+</div>
 
-<h3>PhD Students</h3>
-<ol>																														
-  <!-- <li>Eduardo Miguel Lage Dixo Sousa, PhD St. FCUP (supervisor), "to be defined", 2018/xxxx</li>	-->
-  <!-- <li>Fabio Andre Costa Azevedo, PhD St. FEUP (supervisor), "to be defined", 2019/xxxx</li>	-->											
-  <!-- <li>Pedro Miguel Vendas da Costa, PhD St. FEUP (supervisor), "to be defined", 2020/xxxx</li> -->
-  <!-- <li>Nuno Freitas, PhD St. FEUP (supervisor), "to be defined", 2023/xxxx</li>		-->											
-  <li>Maria Helena Sampaio de Mendonça Montenegro e Almeida, PhD St. FEUP (supervisor), "to be defined", 2021/xxxx</li>
-  <li>Joao Diogo Fernandes Freitas Nunes, PhD St. FEUP (supervisor), "to be defined", 2022/xxxx</li>	
-  <li>Beatriz Vieira, PhD St. IST (co-supervisor), "to be defined", 2022/xxxx</li>											
-  <li>Bruno Fonseca, PhD St. FEUP (supervisor), "to be defined", 2022/xxxx</li>												
-  <li>Hossein Zolfagharnasab, PhD St. FEUP (supervisor), "to be defined", 2023/xxxx</li>		
-  <li>Arefeh Mazarei, PhD St. FEUP (supervisor), "to be defined", 2023/xxxx</li>		
-  <li>Felipe Coutinho, PhD St. FEUP (supervisor), "to be defined", 2024/xxxx</li>												
-  <li>Wenwu Ma, PhD St. FEUP (supervisor), "to be defined", 2024/xxxx</li>	
-  <li>Chao Liu, PhD St. FEUP (co-supervisor), "to be defined", 2024/xxxx</li>	
-  <li>Pedro Lima, PhD St. FEUP (co-supervisor), "to be defined", 2024/xxxx</li>	
-  <li>Safa Vakili, PhD St. FEUP (co-supervisor), "to be defined", 2024/xxxx</li>	
-  <li>Mariana Doria Prata Lima, PhD St. LNCC (co-supervisor), "to be defined", 2025/xxxx</li>	
-</ol>
+I have developed a sustained research agenda at the intersection of:
+
+- **robust learning**
+- **uncertainty awareness**
+- **explainability**
+
+with applications in **medical decision support**, **biometrics**, and **safety-critical vision systems**.
+
+For over two decades, my goal has been to build machine learning systems that can reason from visual data in a **robust, interpretable, and verifiable manner**.  
+My work spans:
+
+- methodological advances  
+- system-level integration  
+- deployment-oriented research  
+
+with the aim of ensuring reliability, transparency, and accountability beyond controlled benchmark conditions.
+
+---
+
+## Research Group
+
+👉 [Visual Computing and Machine Intelligence (VCMI)](https://vcmi.inesctec.pt/)
+
+<div style="margin-top: 10px; margin-bottom: 20px; padding-left: 15px; border-left: 3px solid #e0e0e0;">
+
+<div style="margin-bottom: 12px;">
+  <strong style="color: #4c72b0;">2024</strong> — Leadership transitioned to Ana Filipa Sequeira
+</div>
+
+<div style="margin-bottom: 12px;">
+  <strong style="color: #4c72b0;">~2022</strong> — VCMI and IPPR merged into a unified research structure within CTM
+</div>
+
+<div style="margin-bottom: 12px;">
+  <strong style="color: #4c72b0;">~2016</strong> — Leadership transitioned to Helder Oliveira
+</div>
+
+<div style="margin-bottom: 12px;">
+  <strong style="color: #4c72b0;">2012</strong> — Creation of the IPPR Area (Information Processing and Pattern Recognition), with VCMI as its main research group
+</div>
+
+<div style="margin-bottom: 12px;">
+  <strong style="color: #4c72b0;">2011</strong> — Formal establishment of VCMI  
+  <div style="font-size: 0.95em; color: #555;">
+    The group name was formalised, along with the creation of its proposal, website, and mailing list
+  </div>
+</div>
+
+</div>
+
+---
+
+## PhD Students
+
+<div style="margin-top: 15px;">
+
+<ul style="list-style: none; padding-left: 0;">
+
+<li><strong style="color:#4c72b0;">2025–</strong> Mariana Doria Prata Lima — <em>LNCC</em> (co-supervisor)</li>
+
+<li><strong style="color:#4c72b0;">2024–</strong> Felipe Coutinho — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Wenwu Ma — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Chao Liu — <em>FEUP</em> (co-supervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Pedro Lima — <em>FEUP</em> (co-supervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Safa Vakili — <em>FEUP</em> (co-supervisor)</li>
+
+<li><strong style="color:#4c72b0;">2023–</strong> Hossein Zolfagharnasab — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2023–</strong> Arefeh Mazarei — <em>FEUP</em> (supervisor)</li>
+
+<li><strong style="color:#4c72b0;">2022–</strong> João Diogo Fernandes Freitas Nunes — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2022–</strong> Beatriz Vieira — <em>IST</em> (co-supervisor)</li>
+<li><strong style="color:#4c72b0;">2022–</strong> Bruno Fonseca — <em>FEUP</em> (supervisor)</li>
+
+<li><strong style="color:#4c72b0;">2021–</strong> Maria Helena Sampaio de Mendonça Montenegro e Almeida — <em>FEUP</em> (supervisor)</li>
+
+</ul>
+
+</div>
