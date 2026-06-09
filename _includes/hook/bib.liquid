@@ -1,17 +1,22 @@
 {% comment %}
   _includes/hook/bib.liquid
-  Called once per entry inside bib.liquid (between entrytype and periodical).
-  Emits hidden metadata that bib_search.liquid's JS reads.
+  Called once per entry inside bib.liquid.
+  Emits hidden metadata that bib_search.liquid's JS reads to:
+    - stamp data-pub-type / data-pub-year on the <li>
+    - inject the type badge and BibTeX toggle button
 {% endcomment %}
 
 {%- assign _pt_label = "Other"      -%}
 {%- assign _pt_key   = "other"      -%}
+
 {%- if entry.type == "article" -%}
-  {%- assign _pt_label = "Journal"     -%}{%- assign _pt_key = "article"       -%}
+  {%- assign _pt_label = "Journal"      -%}{%- assign _pt_key = "article"       -%}
 {%- elsif entry.type == "inproceedings" -%}
-  {%- assign _pt_label = "Conference"  -%}{%- assign _pt_key = "inproceedings" -%}
+  {%- assign _pt_label = "Conference"   -%}{%- assign _pt_key = "inproceedings" -%}
 {%- elsif entry.type == "book" -%}
-  {%- assign _pt_label = "Book"        -%}{%- assign _pt_key = "book"          -%}
+  {%- assign _pt_label = "Book"         -%}{%- assign _pt_key = "book"          -%}
+{%- elsif entry.type == "inbook" -%}
+  {%- assign _pt_label = "Chapter"         -%}{%- assign _pt_key = "inbook"          -%}  
 {%- endif -%}
 
 <div class="pub-meta-hook"
@@ -20,4 +25,5 @@
      data-entry-key="{{ entry.key }}"
      data-entry-year="{{ entry.year }}"
      style="display:none"></div>
-<script type="text/plain" class="pub-raw-bibtex">{{ entry.bibtex | hideCustomBibtex }}</script>
+
+<script type="text/plain" class="pub-raw-bibtex" id="bibtex-{{ entry.key }}">{{ entry.bibtex | hideCustomBibtex }}</script>
