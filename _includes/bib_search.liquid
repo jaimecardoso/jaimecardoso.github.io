@@ -1,7 +1,6 @@
 {% comment %}_includes/bib_search.liquid{% endcomment %}
 
 <style>
-/* ── Filter bar ─────────────────────────────────────────────── */
 #pub-filter-bar {
   margin-bottom: 1.6rem;
   font-size: 0.88rem;
@@ -26,7 +25,6 @@
   border-radius: 4px;
   font-size: 0.88rem;
   font-family: inherit;
-  min-width: 0;
 }
 #pub-clear-btn {
   padding: 0.35rem 0.7rem;
@@ -35,12 +33,9 @@
   background: #f5f5f5;
   cursor: pointer;
   font-size: 0.82rem;
-  white-space: nowrap;
   font-family: inherit;
 }
 #pub-clear-btn:hover { background: #e8e8e8; }
-
-/* year range */
 .pub-year-input {
   width: 72px;
   padding: 0.33rem 0.5rem;
@@ -51,8 +46,6 @@
   text-align: center;
 }
 .pub-year-sep { color: #999; padding: 0 2px; }
-
-/* type chips */
 .pub-type-chip {
   padding: 0.28rem 0.65rem;
   border-radius: 999px;
@@ -64,22 +57,18 @@
   transition: background 0.12s, color 0.12s;
   white-space: nowrap;
 }
-.pub-type-chip.active { color: #fff !important; border-color: transparent !important; }
+.pub-type-chip.chip-active { color: #fff !important; border-color: transparent !important; }
 .pub-type-chip[data-type="all"]           { color: #555; border-color: #aaa; }
 .pub-type-chip[data-type="article"]       { color: #1976D2; }
 .pub-type-chip[data-type="inproceedings"] { color: #388E3C; }
 .pub-type-chip[data-type="book"]          { color: #7B1FA2; }
 .pub-type-chip[data-type="other"]         { color: #7a7a7a; }
-.pub-type-chip.active[data-type="all"]           { background: #555; }
-.pub-type-chip.active[data-type="article"]       { background: #1976D2; }
-.pub-type-chip.active[data-type="inproceedings"] { background: #388E3C; }
-.pub-type-chip.active[data-type="book"]          { background: #7B1FA2; }
-.pub-type-chip.active[data-type="other"]         { background: #7a7a7a; }
-
-/* count */
+.pub-type-chip.chip-active[data-type="all"]           { background: #555; }
+.pub-type-chip.chip-active[data-type="article"]       { background: #1976D2; }
+.pub-type-chip.chip-active[data-type="inproceedings"] { background: #388E3C; }
+.pub-type-chip.chip-active[data-type="book"]          { background: #7B1FA2; }
+.pub-type-chip.chip-active[data-type="other"]         { background: #7a7a7a; }
 #pub-count { font-size: 0.83rem; color: #666; margin-top: 0.15rem; }
-
-/* ── Per-entry type badge ────────────────────────────────────── */
 .pub-type-tag {
   display: inline-block;
   font-size: 0.7rem !important;
@@ -89,7 +78,6 @@
   text-decoration: none !important;
   cursor: default;
   user-select: none;
-  vertical-align: middle;
   border: 1px solid currentColor;
   line-height: 1.5;
   margin-right: 2px;
@@ -98,11 +86,9 @@
 .pub-type-tag[data-type="inproceedings"] { color: #388E3C; }
 .pub-type-tag[data-type="book"]          { color: #7B1FA2; }
 .pub-type-tag[data-type="other"]         { color: #7a7a7a; }
-
-/* ── BibTeX toggle ──────────────────────────────────────────── */
 a.pub-bib-btn { font-size: 0.7rem !important; }
-.pub-bibtex-block         { display: none; margin-top: 0.5rem; }
-.pub-bibtex-block.open    { display: block; }
+.pub-bibtex-block { display: none; margin-top: 0.5rem; }
+.pub-bibtex-block.bib-open { display: block; }
 .pub-bibtex-block pre {
   background: #f8f8f8;
   border: 1px solid #ddd;
@@ -113,44 +99,29 @@ a.pub-bib-btn { font-size: 0.7rem !important; }
   white-space: pre;
   margin: 0;
 }
-
-/* ── Reverse sequential number ──────────────────────────────── */
 .pub-entry-num {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
   color: #aaa;
-  min-width: 1.8rem;
+  min-width: 2rem;
   text-align: right;
   margin-right: 0.4rem;
-  vertical-align: top;
   line-height: 1.6;
   user-select: none;
-  flex-shrink: 0;
-}
-/* Make the row inside each li flex so number sits alongside content */
-li.pub-entry > .row {
-  display: flex !important;
-}
-li.pub-entry > .row > .pub-entry-num-col {
-  display: flex;
-  align-items: flex-start;
-  padding-top: 2px;
+  vertical-align: top;
 }
 </style>
 
-<!-- ── Filter bar ──────────────────────────────────────────────── -->
 <div id="pub-filter-bar">
   <div class="pub-filter-row">
     <label>Search</label>
-    <input id="pub-search-input" type="text"
-           placeholder="title, author, venue…"
-           aria-label="Search publications" autocomplete="off">
+    <input id="pub-search-input" type="text" placeholder="title, author, venue…" autocomplete="off">
     <button id="pub-clear-btn">✕ Clear all</button>
   </div>
   <div class="pub-filter-row">
     <label>Type</label>
-    <button class="pub-type-chip active" data-type="all">All</button>
+    <button class="pub-type-chip chip-active" data-type="all">All</button>
     <button class="pub-type-chip" data-type="article">Journal</button>
     <button class="pub-type-chip" data-type="inproceedings">Conference</button>
     <button class="pub-type-chip" data-type="book">Book</button>
@@ -158,225 +129,220 @@ li.pub-entry > .row > .pub-entry-num-col {
   </div>
   <div class="pub-filter-row">
     <label>Years</label>
-    <input class="pub-year-input" id="pub-year-from" type="number"
-           placeholder="from" min="1990" max="2030" aria-label="Year from">
+    <input class="pub-year-input" id="pub-year-from" type="number" placeholder="from" min="1990" max="2030">
     <span class="pub-year-sep">–</span>
-    <input class="pub-year-input" id="pub-year-to" type="number"
-           placeholder="to" min="1990" max="2030" aria-label="Year to">
+    <input class="pub-year-input" id="pub-year-to"   type="number" placeholder="to"   min="1990" max="2030">
   </div>
   <div id="pub-count">Showing <strong id="pub-count-n">…</strong> publications</div>
 </div>
 
 <script>
-(function () {
-  "use strict";
+/* Wait until the full page (all scripts, images) has loaded */
+window.addEventListener('load', function pubFilterInit() {
 
-  var KNOWN_TYPES = { article: true, inproceedings: true, book: true };
+  var KNOWN = { article: true, inproceedings: true, book: true };
+  function canon(t) { return KNOWN[t] ? t : 'other'; }
 
-  function canonicalType(raw) {
-    return KNOWN_TYPES[raw] ? raw : "other";
-  }
+  var pub  = document.querySelector('.publications');
+  if (!pub) return;
+  var items = pub.querySelectorAll('ol.bibliography > li');
+  if (!items.length) return;
 
-  /* Build search text from an li, explicitly EXCLUDING .badges content
-     so google-scholar citation counts don't pollute the search index */
-  function buildSearchText(li) {
-    /* Clone and strip .badges to avoid "47 Google Scholar citations" noise */
-    var clone = li.cloneNode(true);
-    var badges = clone.querySelectorAll(".badges, .pub-bibtex-block, .pub-meta-hook, script");
-    badges.forEach(function(el) { el.remove(); });
-    return clone.textContent.toLowerCase();
-  }
+  /* ── 1. Decorate each <li> ───────────────────────────────── */
+  for (var i = 0; i < items.length; i++) {
+    var li   = items[i];
+    var meta = li.querySelector('.pub-meta-hook');
+    if (!meta) continue;
 
-  function initPublications() {
-    var pubsDiv = document.querySelector(".publications");
-    if (!pubsDiv) return;
+    var rawType   = meta.getAttribute('data-type-key')   || 'other';
+    var typeLabel = meta.getAttribute('data-type-label') || 'Other';
+    var entryKey  = meta.getAttribute('data-entry-key')  || '';
+    var entryYear = parseInt(meta.getAttribute('data-entry-year') || '0', 10);
+    var cType     = canon(rawType);
 
-    var allLi = Array.from(pubsDiv.querySelectorAll("ol.bibliography > li"));
-    if (!allLi.length) return;
+    /* data attributes for filtering */
+    li.setAttribute('data-t', cType);
+    li.setAttribute('data-y', entryYear);
 
-    /* ── Decorate every <li> ─────────────────────────────────── */
-    allLi.forEach(function (li) {
-      var meta = li.querySelector(".pub-meta-hook");
-      if (!meta) return;
+    /* search text: title + author only (avoid badge noise) */
+    var titleEl  = li.querySelector('.title');
+    var authorEl = li.querySelector('.author');
+    var periodEl = li.querySelector('.periodical');
+    var txt = [titleEl, authorEl, periodEl]
+      .map(function(el) { return el ? el.textContent : ''; })
+      .join(' ').toLowerCase();
+    li.setAttribute('data-s', txt);
 
-      var rawType   = meta.getAttribute("data-type-key")   || "other";
-      var typeLabel = meta.getAttribute("data-type-label") || "Other";
-      var entryKey  = meta.getAttribute("data-entry-key")  || "";
-      var entryYear = parseInt(meta.getAttribute("data-entry-year") || "0", 10);
-      var cType     = canonicalType(rawType);
-
-      li.setAttribute("data-pub-type", cType);
-      li.setAttribute("data-pub-year", entryYear);
-      li.setAttribute("data-pub-text", buildSearchText(li));
-      li.classList.add("pub-entry");
-
-      /* ── Type badge → prepend to .links ── */
-      var linksDiv = li.querySelector(".links");
-      if (linksDiv && !linksDiv.querySelector(".pub-type-tag")) {
-        var badge = document.createElement("a");
-        badge.className = "pub-type-tag btn btn-sm z-depth-0";
-        badge.setAttribute("data-type", cType);
-        badge.setAttribute("role", "button");
-        badge.textContent = typeLabel;
-        linksDiv.insertBefore(badge, linksDiv.firstChild);
-      }
-
-      /* ── BibTeX toggle: only add if no native Bib button exists ── */
-      var linksDiv2 = li.querySelector(".links");
-      var hasBibBtn = linksDiv2 && linksDiv2.querySelector(".bibtex");
-      var bibScript = li.querySelector(".pub-raw-bibtex");
-
-      if (bibScript && linksDiv2 && !hasBibBtn && !li.querySelector(".pub-bib-btn")) {
-        var rawBib = bibScript.textContent.trim();
-
-        var bibBtn = document.createElement("a");
-        bibBtn.className = "pub-bib-btn btn btn-sm z-depth-0";
-        bibBtn.setAttribute("role", "button");
-        bibBtn.textContent = "Bib";
-        linksDiv2.appendChild(bibBtn);
-
-        var bibBlock = document.createElement("div");
-        bibBlock.className = "pub-bibtex-block";
-        var pre = document.createElement("pre");
-        pre.textContent = rawBib;
-        bibBlock.appendChild(pre);
-
-        var colDiv = entryKey ? li.querySelector("[id='" + CSS.escape(entryKey) + "']") : null;
-        if (colDiv) {
-          colDiv.appendChild(bibBlock);
-        }
-
-        bibBtn.addEventListener("click", function () {
-          var open = bibBlock.classList.toggle("open");
-          bibBtn.classList.toggle("active", open);
-        });
-      }
-    });
-
-    /* ── Numbering: assign reverse sequential numbers to visible entries ── */
-    function updateNumbers() {
-      var visible = allLi.filter(function (li) {
-        return li.style.display !== "none";
-      });
-      var total = visible.length;
-      visible.forEach(function (li, idx) {
-        /* Find or create the number span — insert BEFORE the .row div */
-        var num = li.querySelector(".pub-entry-num");
-        if (!num) {
-          num = document.createElement("span");
-          num.className = "pub-entry-num";
-          var row = li.querySelector(".row");
-          if (row) {
-            li.insertBefore(num, row);
-          } else {
-            li.insertBefore(num, li.firstChild);
-          }
-        }
-        num.textContent = (total - idx) + ".";
-      });
-      /* Clear numbers from hidden entries */
-      allLi.forEach(function(li) {
-        if (li.style.display === "none") {
-          var num = li.querySelector(".pub-entry-num");
-          if (num) num.textContent = "";
-        }
-      });
+    /* type badge prepended to .links */
+    var links = li.querySelector('.links');
+    if (links && !links.querySelector('.pub-type-tag')) {
+      var badge    = document.createElement('a');
+      badge.className = 'pub-type-tag btn btn-sm z-depth-0';
+      badge.setAttribute('data-type', cType);
+      badge.setAttribute('role', 'button');
+      badge.textContent = typeLabel;
+      links.insertBefore(badge, links.firstChild);
     }
 
-    /* ── Filter state ─────────────────────────────────────────── */
-    var activeType = "all";
-    var searchText = "";
-    var yearFrom   = null;
-    var yearTo     = null;
+    /* Bib toggle: find script.pub-raw-bibtex inside this li */
+    var bibScript = li.querySelector('script.pub-raw-bibtex');
+    var links2    = li.querySelector('.links');
+    if (bibScript && links2 && !li.querySelector('.pub-bib-btn')) {
+      var rawBib = bibScript.textContent || bibScript.innerText || '';
+      rawBib = rawBib.trim();
 
-    /* ── Apply filters, hide empty sections, renumber ─────────── */
-    function applyFilters() {
-      var visible = 0;
+      var btn = document.createElement('a');
+      btn.className = 'pub-bib-btn btn btn-sm z-depth-0';
+      btn.setAttribute('role', 'button');
+      btn.textContent = 'Bib';
+      links2.appendChild(btn);
 
-      allLi.forEach(function (li) {
-        var t   = li.getAttribute("data-pub-type") || "other";
-        var y   = parseInt(li.getAttribute("data-pub-year") || "0", 10);
-        var txt = li.getAttribute("data-pub-text") || "";
-
-        var typeOk     = (activeType === "all") || (t === activeType);
-        var searchOk   = !searchText || txt.indexOf(searchText) !== -1;
-        var yearFromOk = !yearFrom || y >= yearFrom;
-        var yearToOk   = !yearTo   || y <= yearTo;
-
-        var show = typeOk && searchOk && yearFromOk && yearToOk;
-        li.style.display = show ? "" : "none";
-        if (show) visible++;
-      });
-
-      /* Hide year h2 + its ol when all children are hidden */
-      var nodes = Array.from(pubsDiv.children);
-      for (var i = 0; i < nodes.length; i++) {
-        var node = nodes[i];
-        if (node.tagName === "H2") {
-          var ol = null;
-          for (var j = i + 1; j < nodes.length && nodes[j].tagName !== "H2"; j++) {
-            if (nodes[j].tagName === "OL") { ol = nodes[j]; break; }
-          }
-          if (ol) {
-            var anyVisible = Array.from(ol.querySelectorAll("li"))
-              .some(function (l) { return l.style.display !== "none"; });
-            node.style.display = anyVisible ? "" : "none";
-            ol.style.display   = anyVisible ? "" : "none";
-          }
+      /* attach block to the col div — find it by walking children */
+      var colDiv = null;
+      var children = li.querySelectorAll('div[id]');
+      for (var c = 0; c < children.length; c++) {
+        if (children[c].getAttribute('id') === entryKey) {
+          colDiv = children[c];
+          break;
         }
       }
+      /* fallback: just append to the li */
+      var container = colDiv || li;
 
-      document.getElementById("pub-count-n").textContent = visible;
-      updateNumbers();
-    }
+      var block = document.createElement('div');
+      block.className = 'pub-bibtex-block';
+      var pre = document.createElement('pre');
+      pre.textContent = rawBib;
+      block.appendChild(pre);
+      container.appendChild(block);
 
-    /* Run once after everything (including badge images) is loaded */
-    applyFilters();
-
-    /* ── Wire controls ────────────────────────────────────────── */
-    document.getElementById("pub-search-input").addEventListener("input", function () {
-      searchText = this.value.trim().toLowerCase();
-      applyFilters();
-    });
-
-    document.getElementById("pub-year-from").addEventListener("input", function () {
-      yearFrom = this.value ? parseInt(this.value, 10) : null;
-      applyFilters();
-    });
-
-    document.getElementById("pub-year-to").addEventListener("input", function () {
-      yearTo = this.value ? parseInt(this.value, 10) : null;
-      applyFilters();
-    });
-
-    document.getElementById("pub-clear-btn").addEventListener("click", function () {
-      document.getElementById("pub-search-input").value = "";
-      document.getElementById("pub-year-from").value   = "";
-      document.getElementById("pub-year-to").value     = "";
-      searchText = ""; yearFrom = null; yearTo = null; activeType = "all";
-      document.querySelectorAll(".pub-type-chip").forEach(function (c) {
-        c.classList.toggle("active", c.getAttribute("data-type") === "all");
-      });
-      applyFilters();
-    });
-
-    document.querySelectorAll(".pub-type-chip").forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        activeType = chip.getAttribute("data-type");
-        document.querySelectorAll(".pub-type-chip").forEach(function (c) {
-          c.classList.toggle("active", c === chip);
+      /* closure over btn+block */
+      (function(b, bl) {
+        b.addEventListener('click', function() {
+          var open = bl.classList.toggle('bib-open');
+          b.classList.toggle('active', open);
         });
-        applyFilters();
+      })(btn, block);
+    }
+  }
+
+  /* ── 2. Number visible entries (descending) ──────────────── */
+  function renumber() {
+    var visible = [];
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].style.display !== 'none') visible.push(items[i]);
+    }
+    var n = visible.length;
+    for (var j = 0; j < visible.length; j++) {
+      var numSpan = visible[j].querySelector('.pub-entry-num');
+      if (!numSpan) {
+        numSpan = document.createElement('span');
+        numSpan.className = 'pub-entry-num';
+        visible[j].insertBefore(numSpan, visible[j].firstChild);
+      }
+      numSpan.textContent = (n - j) + '.';
+    }
+    /* clear hidden */
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].style.display === 'none') {
+        var s = items[i].querySelector('.pub-entry-num');
+        if (s) s.textContent = '';
+      }
+    }
+  }
+
+  /* ── 3. Filter ───────────────────────────────────────────── */
+  var activeType = 'all';
+  var searchTxt  = '';
+  var yFrom = null;
+  var yTo   = null;
+
+  function filter() {
+    var count = 0;
+    for (var i = 0; i < items.length; i++) {
+      var li = items[i];
+      var t  = li.getAttribute('data-t') || 'other';
+      var y  = parseInt(li.getAttribute('data-y') || '0', 10);
+      var s  = li.getAttribute('data-s') || '';
+      var ok = (activeType === 'all' || t === activeType)
+            && (!searchTxt || s.indexOf(searchTxt) >= 0)
+            && (!yFrom || y >= yFrom)
+            && (!yTo   || y <= yTo);
+      li.style.display = ok ? '' : 'none';
+      if (ok) count++;
+    }
+    /* hide empty year sections */
+    var nodes = pub.children;
+    for (var i = 0; i < nodes.length; i++) {
+      var node = nodes[i];
+      if (node.tagName === 'H2') {
+        var ol = null;
+        for (var j = i + 1; j < nodes.length && nodes[j].tagName !== 'H2'; j++) {
+          if (nodes[j].tagName === 'OL') { ol = nodes[j]; break; }
+        }
+        if (ol) {
+          var any = false;
+          var lis = ol.querySelectorAll('li');
+          for (var k = 0; k < lis.length; k++) {
+            if (lis[k].style.display !== 'none') { any = true; break; }
+          }
+          node.style.display = any ? '' : 'none';
+          ol.style.display   = any ? '' : 'none';
+        }
+      }
+    }
+    var countEl = document.getElementById('pub-count-n');
+    if (countEl) countEl.textContent = count;
+    renumber();
+  }
+
+  /* run once to set initial count + numbers */
+  filter();
+
+  /* ── 4. Wire controls ────────────────────────────────────── */
+  var searchEl = document.getElementById('pub-search-input');
+  var clearBtn = document.getElementById('pub-clear-btn');
+  var yFromEl  = document.getElementById('pub-year-from');
+  var yToEl    = document.getElementById('pub-year-to');
+  var chips    = document.querySelectorAll('.pub-type-chip');
+
+  if (searchEl) searchEl.addEventListener('input', function() {
+    searchTxt = this.value.trim().toLowerCase();
+    filter();
+  });
+
+  if (yFromEl) yFromEl.addEventListener('input', function() {
+    yFrom = this.value ? parseInt(this.value, 10) : null;
+    filter();
+  });
+
+  if (yToEl) yToEl.addEventListener('input', function() {
+    yTo = this.value ? parseInt(this.value, 10) : null;
+    filter();
+  });
+
+  if (clearBtn) clearBtn.addEventListener('click', function() {
+    if (searchEl) searchEl.value = '';
+    if (yFromEl)  yFromEl.value  = '';
+    if (yToEl)    yToEl.value    = '';
+    searchTxt = ''; yFrom = null; yTo = null; activeType = 'all';
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].classList.toggle('chip-active', chips[i].getAttribute('data-type') === 'all');
+    }
+    filter();
+  });
+
+  for (var i = 0; i < chips.length; i++) {
+    (function(chip) {
+      chip.addEventListener('click', function() {
+        activeType = chip.getAttribute('data-type');
+        for (var j = 0; j < chips.length; j++) {
+          chips[j].classList.toggle('chip-active', chips[j] === chip);
+        }
+        filter();
       });
-    });
+    })(chips[i]);
   }
 
-  /* Wait for full page load (including all scripts al-folio injects) */
-  if (document.readyState === "complete") {
-    initPublications();
-  } else {
-    window.addEventListener("load", initPublications);
-  }
-
-}());
+});
 </script>
