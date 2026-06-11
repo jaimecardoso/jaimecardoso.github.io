@@ -89,6 +89,131 @@
 
 
 
+- name: "Andre Filipe Ferreira de Castro"
+  year: 2014
+  role: "FEUP (co-supervisor)"
+  title: "Reconhecimento de simbolos musicais em imagens cinza de partituras manuscritas"
+  link: "http://hdl.handle.net/10216/76458"
+
+- name: "Marisa Mendonca dos Reis"
+  year: 2014
+  role: "FEUP (co-supervisor)"
+  title: "A Comparative Study on Fingerprint Matching Algorithms"
+  link: "http://hdl.handle.net/10216/90282"
+
+- name: "Carlos Jorge Alves da Hora Martins"
+  year: 2014
+  role: "FEUP (supervisor)"
+  title: "Contributions to the Automatic Recognition of Portuguese Sign Language"
+  link: "http://hdl.handle.net/10216/77124"
+
+- name: "Filipe Oliveira Ramos Trocado Ferreira"
+  year: 2014
+  role: "FEUP (supervisor)"
+  title: "Video Analysis in Indoor Soccer with a Quadcopter"
+  link: "http://hdl.handle.net/10216/75795"
+
+- name: "Joao David Pereira da Costa"
+  year: 2014
+  role: "FEUP (supervisor)"
+  title: "Ensemble Methods in Ordinal Data Classification"
+  link: "http://hdl.handle.net/10216/73795"
+
+- name: "Ana Rute Caetano Louro"
+  year: 2014
+  role: "FEUP (supervisor)"
+  title: "Liveness Detection in Biometrics"
+  link: "http://hdl.handle.net/10216/73623"
+
+- name: "Ana Rita Carvalho Moreira"
+  year: 2014
+  role: "FEUP (co-supervisor)"
+  title: "Dynamic Analysis of Upper Limbs Movements after Breast Cancer Surgery"
+  link: "http://hdl.handle.net/10216/73199"
+
+- name: "Pedro Miguel Ferro da Costa"
+  year: 2014
+  role: "FEUP (co-supervisor)"
+  title: "Kinect Based System for Breast 3D Reconstruction"
+  link: "http://hdl.handle.net/10216/74685"
+
+- name: "Vitor Joel do Nascimento Araujo"
+  year: 2014
+  role: "FEUP (supervisor)"
+  title: "Human detection solution for a retail store environment"
+  link: "http://hdl.handle.net/10216/90924"
+
+- name: "Rui Miguel Filipe da Silva"
+  year: 2013
+  role: "FEUP (co-supervisor)"
+  title: "Mobile framework for recognition of musical characters"
+  link: "https://hdl.handle.net/10216/68500"
+
+- name: "Joao Paulo Leite Botelho"
+  year: 2013
+  role: "FEUP (supervisor)"
+  title: "KITE - Tracking da bola em jogos de futsal com video"
+
+- name: "Juliano Ferreira Jorge Murari"
+  year: 2013
+  role: "FEUP (supervisor)"
+  title: "Deteccao de vivacidade em sistemas de reconhecimento de iris"
+
+- name: "Joana Cristina Lopes da Fonseca"
+  year: 2013
+  role: "FEUP (supervisor)"
+  title: "Pre-CADs in Breast Cancer"
+
+- name: "Claudia Marina Correia Castro"
+  year: 2013
+  role: "FMUP (supervisor)"
+  title: "Estudo do impacto da densidade mamaria no cancro da mama"
+  link: "https://hdl.handle.net/10216/91479"
+
+- name: "Vitor Hugo Couto Vidal"
+  year: 2012
+  role: "FEUP (supervisor)"
+  title: "Staffline detection and removal in the Grayscale Domain"
+
+- name: "Marco Alexandre Dias Silva"
+  year: 2012
+  role: "FEUP (supervisor)"
+  title: "Kinect Based System Applied to Breast Cancer Conservative Treatment"
+
+- name: "Joao Pedro da Silva Monteiro"
+  year: 2012
+  role: "FEUP (supervisor)"
+  title: "Automatic Behavior Recognition in Laboratory Animals using Kinect"
+
+- name: "Joao Carlos de Sousa Monteiro"
+  year: 2012
+  role: "FEUP (supervisor)"
+  title: "Robust Iris Recognition under Unconstrained Settings"
+
+- name: "Miguel Jorge Pereira Cova"
+  year: 2011
+  role: "FEUP (supervisor)"
+  title: "Global localization of vertical road signs using a car equipped with a stereo vision system and GPS"
+
+- name: "Diogo Santos Martins"
+  year: 2011
+  role: "FEUP (supervisor)"
+  title: "Biometric recognition based on the texture along palmprint principal lines"
+
+- name: "Diogo Machado Carneiro Dias"
+  year: 2011
+  role: "FEUP (supervisor)"
+  title: "Computational Vision Applied to the Segmentation and Morphometric Characterization of the Sciatic Nerve in Microscopic Images"
+
+- name: "Joao Miguel Trigo Soares"
+  year: 2011
+  role: "FEUP (supervisor)"
+  title: "Uncalibrated Stereo Vision applied to Breast Cancer Treatment Aesthetic Assessment"
+
+- name: "Helder Jose da Silva Matos"
+  year: 2011
+  role: "FEUP (supervisor)"
+  title: "Reconhecimento Biometrico Baseado na Geometria da Mao"
 
 - name: "Joao Paulo da Silva Ferreira Monteiro"
   year: 2011
