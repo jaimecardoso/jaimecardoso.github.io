@@ -58,8 +58,8 @@ Learn [here](https://study-research.pt/) why you should study and do research in
 
 <ul>
   <li><i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=fadRi1YAAAAJ">Google Scholar</a></li>
+  <li><i class="ai ai-scopus"></i> <a href="https://www.scopus.com/authid/detail.url?authorId=9245302400">Scopus</a></li>  
   <li><i class="ai ai-orcid"></i> <a href="https://orcid.org/0000-0002-3760-2473">ORCID</a></li>
-  <li><i class="ai ai-scopus"></i> <a href="https://www.scopus.com/authid/detail.url?authorId=9245302400">Scopus</a></li>
   <li><i class="ai ai-dblp"></i> <a href="https://dblp.org/pid/65/5236">DBLP</a></li>
 </ul>
 

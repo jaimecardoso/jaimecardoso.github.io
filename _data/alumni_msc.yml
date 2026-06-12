@@ -572,12 +572,6 @@
   link: "http://hdl.handle.net/10216/115041"
   grade: null
 
-- name: "Ricardo Dantas Cerqueira"
-  year: 2018
-  role: "FEUP (supervisor)"
-  title: "New Learning Strategies in Deep Models for Breast Cancer Screening"
-  link: "http://hdl.handle.net/10216/115041"
-
 - name: "Licinio Manuel França de Oliveira"
   year: 2018
   role: "FEUP (supervisor)"
@@ -664,7 +658,7 @@
 
 - name: "Ana Filipa Domingues Geros"
   year: 2015
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Capture and analysis of the trajectories of anatomical points on the face to support and evaluate reconstructive plastic surgery"
   link: "http://hdl.handle.net/10216/79460"
 
@@ -681,13 +675,13 @@
 
 - name: "Andre Filipe Ferreira de Castro"
   year: 2014
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Reconhecimento de simbolos musicais em imagens cinza de partituras manuscritas"
   link: "http://hdl.handle.net/10216/76458"
 
 - name: "Marisa Mendonca dos Reis"
   year: 2014
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "A Comparative Study on Fingerprint Matching Algorithms"
   link: "http://hdl.handle.net/10216/90282"
 
@@ -717,13 +711,13 @@
 
 - name: "Ana Rita Carvalho Moreira"
   year: 2014
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Dynamic Analysis of Upper Limbs Movements after Breast Cancer Surgery"
   link: "http://hdl.handle.net/10216/73199"
 
 - name: "Pedro Miguel Ferro da Costa"
   year: 2014
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Kinect Based System for Breast 3D Reconstruction"
   link: "http://hdl.handle.net/10216/74685"
 
@@ -735,7 +729,7 @@
 
 - name: "Rui Miguel Filipe da Silva"
   year: 2013
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Mobile framework for recognition of musical characters"
   link: "https://hdl.handle.net/10216/68500"
 
@@ -912,19 +906,19 @@
 
 - name: "Guilherme Artur Conceicao Capela"
   year: 2007
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Sistema automático de reconhecimento de pautas musicais manuscritas"
   note: "undergraduate"
 
 - name: "Ana Maria Silva Rebelo"
   year: 2007
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Reconhecimento automático de pautas musicais manuscritas"
   note: "undergraduate"
 
 - name: "Silvia Maria Faria Saramago"
   year: 2003
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Extração 3D da estrutura da cena e dos parâmetros da câmara"
   note: "undergraduate"
 
