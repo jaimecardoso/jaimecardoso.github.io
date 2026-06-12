@@ -1,77 +1,654 @@
-- name: "José Miguel Pires Teixeira"
+- name: "Luis Silva Sousa"
   year: 2025
-  role: "FEUP (supervisor)"
-  title: "AI-driven Virtual Immuno Staining"
+  role: cosupervisor
+  title: "Detection of Space Debris and Satellites with Machine Learning"
+  link: "https://hdl.handle.net/10216/171651"
+  grade: 19
+
+- name: "Manuel João Gomes Alves Amorim"
+  year: 2025
+  role: cosupervisor
+  title: "Exploring the Efficiency and Interpretability of Kolmogorov-Arnold Networks Across Diverse Domains"
+  link: "https://hdl.handle.net/10216/169620"
+  grade: 19
 
 - name: "Mafalda Bastos da Costa"
   year: 2025
-  role: "FEUP (supervisor)"
-  title: "Interpretable Ordinal Scorecards"
+  role: supervisor
+  title: "Optimised Interpretable Ordinal Scorecards"
+  link: "https://hdl.handle.net/10216/169600"
+  grade: 18
 
-- name: "Manuel Amorim"
+- name: "José Miguel Pires Teixeira"
   year: 2025
-  role: "FEUP (co-supervisor)"
-  title: "Kolmogorov-Arnold Networks"
+  role: supervisor
+  title: "From H&E to IHC: AI-driven Virtual Immuno Staining"
+  link: "https://hdl.handle.net/10216/169599"
+  grade: 20
+
+- name: "Joana Inês Gonçalves dos Santos"
+  year: 2025
+  role: supervisor
+  title: "Predicting the Aesthetic Outcome of Breast Cancer Treatment using Deep Learning"
+  link: "https://hdl.handle.net/10216/168834"
+  grade: 19
+
+- name: "Fabio Almeida Teixeira"
+  year: 2025
+  role: supervisor
+  title: "Deep Learning for the Aesthetic Evaluation of Breast Cancer Treatment"
+  link: "https://hdl.handle.net/10216/168803"
+  grade: 18
+
+- name: "Pedro Miguel Sousa Ferreira"
+  year: 2025
+  role: supervisor
+  title: "Towards Enhancing Domain Generalization in Image Retrieval Systems for Evaluating Aesthetic Outcomes of Breast Surgery"
+  link: "https://hdl.handle.net/10216/168929"
+  grade: 19
+  
+- name: "Leonor Justo dos Santos Fernandes"
+  year: 2025
+  role: supervisor
+  title: "Disentanglement and Assessment of Shortcuts on Ophthalmological Retinal Imaging Exams"
+  link: "https://hdl.handle.net/10216/168693"
+  grade: 19
+
+- name: "Lia da Silva Linhares Vieira"
+  year: 2025
+  role: cosupervisor
+  title: "Development of a web application for real-time inference in AI models for autonomous driving"
+  link: "https://hdl.handle.net/10216/169152"
+  grade: 17
+
+- name: "Marco André Rocha Pinto"
+  year: 2025
+  role: supervisor
+  title: "Generalized Prototypical Parts Siamese Networks for Explainable Identity Recognition"
+  link: "https://hdl.handle.net/10216/167850"
+  grade: 19
+
+- name: "Mariana Costa Osiecka de Carvalho"
+  year: 2025
+  role: supervisor
+  title: "Development of a Computational Model for the Automatic Segmentation of Kidney Structures Using Brightfield Images of Unstained Human Kidney Biopsies"
+  link: "https://hdl.handle.net/10216/169172"
+  grade: 19
+
+- name: "Sofia Jimeno Lucía"
+  year: 2025
+  role: cosupervisor
+  title: "Ordinal Methods for Monocular Depth Estimation"
+  link: "https://hdl.handle.net/10216/167288"
+  grade: 18
+
+- name: "Bruno Aloysio Marques Chicre da Costa"
+  year: 2024
+  role: supervisor
+  title: "Sistema de comparação de objectos com base em AI/ML"
+  link: "https://hdl.handle.net/10216/162337"
+  grade: null
+
+- name: "Joao Filipe Miranda Fragao"
+  year: 2024
+  role: cosupervisor
+  title: "Explainability and Detection of Anomalies in Video"
+  link: "https://hdl.handle.net/10216/162597"
+  grade: null
+
+- name: "Nikolas Ivakko"
+  year: 2024
+  role: cosupervisor
+  title: "Exploring 3D and kinematic information for 2D Human Pose Estimation"
+  link: "https://hdl.handle.net/10216/162628"
+  grade: null
+
+- name: "Pedro Miguel Sampaio Ferreira Machado"
+  year: 2024
+  role: supervisor
+  title: "A deep generative approach for HER2 status assessment on breast H&E"
+  grade: null
+
 
 - name: "Maria José Valente da Silva Carneiro"
   year: 2024
-  role: "FEUP (supervisor)"
-  title: "Digital Pathology Quality Control"
+  role: supervisor
+  title: "Quality Control in Digital Pathology: Improving fragment detection and counting"
   link: "https://hdl.handle.net/10216/161069"
+  grade: null
+
+- name: "Maria Miguel Santos Beirao"
+  year: 2024
+  role: supervisor
+  title: "Classification of Keratitis from Eye Corneal Photographs using Deep Learning: A Comparative Study on Amoeba, Bacteria, and Fungi"
+  link: "https://hdl.handle.net/10216/161004"
+  grade: null
+
+- name: "Ines Alves Martins"
+  year: 2024
+  role: supervisor
+  title: "A Data-Driven Framework for the Assessment and Mitigation of Clinical Measurement Disparities"
+  link: "https://hdl.handle.net/10216/160989"
+  grade: null
+
+- name: "Airton Matos Andrade Fernandes Tiago"
+  year: 2024
+  role: cosupervisor
+  title: "Data Augmentation for Ordinal Data"
+  link: "https://hdl.handle.net/10216/157714"
+  grade: null
 
 - name: "Pedro Fernandes Sousa"
   year: 2023
-  role: "FEUP (supervisor)"
-  title: "Conditional Generation of Diffusion MR Images"
+  role: supervisor
+  title: "AI-based Conditional Generation of Diffusion MR Images"
   link: "https://hdl.handle.net/10216/153875"
+  grade: null
 
-- name: "Inês Rodrigues Campos"
+- name: "Ines Rodrigues Campos"
   year: 2023
-  role: "FEUP (supervisor)"
-  title: "Knee Osteoarthritis Prediction"
+  role: supervisor
+  title: "Prediction of Knee Osteoarthritis using MRI-based Radiomic Features"
   link: "https://hdl.handle.net/10216/153172"
+  grade: null
 
-- name: "Mariana Margalho Alves"
+- name: "Mariana Margalho Alves Calado"
   year: 2023
-  role: "FEUP (co-supervisor)"
-  title: "Explainable AI"
+  role: cosupervisor
+  title: "Application of Explainable AI in Deep Learning Models"
   link: "https://hdl.handle.net/10216/153476"
+  grade: null
 
-- name: "Cláudia Ribeiro"
+- name: "Francisco Campos da Silva Ferreira Ribeiro"
   year: 2023
-  role: "FEUP (supervisor)"
-  title: "Lane Estimation"
+  role: cosupervisor
+  title: "Machine learning applied to deep space images"
+  link: "https://hdl.handle.net/10216/152010"
+  grade: null
+
+- name: "Rafael Valente Cristino"
+  year: 2023
+  role: cosupervisor
+  title: "Introducing Domain Knowledge to Scene Parsing in Autonomous Driving"
+  link: "https://hdl.handle.net/10216/152109"
+  grade: null
+
+- name: "Claudia Maria Eira Ribeiro"
+  year: 2023
+  role: supervisor
+  title: "Drawing the Line: Multimodal Lane Estimation for Autonomous Vehicles"
   link: "https://hdl.handle.net/10216/151989"
+  grade: null
+
+- name: "Caio Macedo Nogueira"
+  year: 2023
+  role: cosupervisor
+  title: "Explainable AI in Object Detection for Autonomous Driving"
+  link: "https://hdl.handle.net/10216/151986"
+  grade: null
+
+- name: "Ricardo Jorge Cruz Fontão"
+  year: 2023
+  role: supervisor
+  title: "Multimodal Deep Implicit Representations for Autonomous Driving"
+  link: "https://hdl.handle.net/10216/152091"
+  grade: null
+
+- name: "Maria Carolina Morgado Bastião Guedes Brás"
+  year: 2023
+  role: supervisor
+  title: "Deep Learning for improved NCP quantification and false positive reduction in CCTA"
+  link: "https://hdl.handle.net/10216/151879"
+  grade: null
+
+- name: "Joao Carlos Ramos Goncalves de Matos"
+  year: 2023
+  role: supervisor
+  title: "Research Frameworks towards Health Equity"
+  link: "https://hdl.handle.net/10216/150994"
+  grade: null
+
+- name: "Joao Filipe Delgado Lemos de Matos"
+  year: 2023
+  role: supervisor
+  title: "Synthetic Data in Semantic Segmentation and Lane Estimation for Autonomous Driving"
+  link: "https://hdl.handle.net/10216/148279"
+  grade: null
+
+- name: "Francisco Tiago de Espírito Santo e Caetano"
+  year: 2023
+  role: cosupervisor
+  title: "Visual Data Processing for Anomaly Detection"
+  link: "https://hdl.handle.net/10216/148119"
+  grade: null
+
+- name: "Vitor Hugo Pereira Barbosa"
+  year: 2022
+  role: supervisor
+  title: "Robust occupant action classification in shared autonomous vehicles"
+  link: "https://hdl.handle.net/10216/144736"
+  grade: null
+
+- name: "Maria Manuel Domingos Carvalho"
+  year: 2022
+  role: supervisor
+  title: "Towards Biometrically-Morphed Case-Based Explanations"
+  link: "https://hdl.handle.net/10216/144211"
+  grade: null
+
+- name: "João Pedro Pinto Mota"
+  year: 2022
+  role: supervisor
+  title: "Deep Implicit Representations in Autonomous Driving"
+  link: "https://hdl.handle.net/10216/143727"
+  grade: null
+
+- name: "Nuno Pinheiro da Silva Mota Freitas"
+  year: 2022
+  role: supervisor
+  title: "Classification of Cervical Cancer Risk using Deep Learning"
+  link: "https://hdl.handle.net/10216/143003"
+  grade: null
+
+- name: "Miguel André Costa e Silva"
+  year: 2022
+  role: cosupervisor
+  title: "Machine Learning Applied to Deep Space Images"
+  link: "https://hdl.handle.net/10216/143458"
+  grade: null
+
+- name: "Margarida Gonçalves Gouveia"
+  year: 2022
+  role: supervisor
+  title: "Geometric Deep Learning in Fingerprint Recognition Systems"
+  link: "https://hdl.handle.net/10216/142994"
+  grade: null
+
+- name: "Marcelo Almeida de Carvalho"
+  year: 2022
+  role: supervisor
+  title: "Efficient Neuromorphic Architectures for Visual Perception"
+  link: "https://hdl.handle.net/10216/143037"
+  grade: null
+
+- name: "Maria Jorge Miranda Loureiro"
+  year: 2022
+  role: supervisor
+  title: "Transfer Learning Techniques for Classification of Biological Samples using Optical Fingerprint"
+  link: "https://hdl.handle.net/10216/142469"
+  grade: null
+  
+- name: "Pedro Duarte da Cunha Nunes Lopes"
+  year: 2022
+  role: cosupervisor
+  title: "Deep Neural Networks for Face-based Emotion Recognition"
+  link: "https://hdl.handle.net/10216/143004"
+  grade: null
+
+- name: "Mariana Silva Xavier"
+  year: 2022
+  role: supervisor
+  title: "Inside Out: Fusing ECG and Face Information to Recognise Emotions"
+  link: "https://hdl.handle.net/10216/143759"
+  grade: null
+
+- name: "Guilherme Augusto Tiritan Romano Barbosa"
+  year: 2022
+  role: supervisor
+  title: "Going 2D: Exploring Learnable Bidimensional Representations for ECG Biometric"
+  link: "https://hdl.handle.net/10216/142451"
+  grade: null
+
+- name: "Diogo Baptista Martins da Mata"
+  year: 2022
+  role: supervisor
+  title: "Biomedical multimodal explanations - increasing diversity and complementarity in explainable artificial intelligence"
+  link: "https://hdl.handle.net/10216/142561"
+  grade: null
+
+- name: "Liliana Filipa Pinho Ribeiro"
+  year: 2021
+  role: supervisor (IPP)
+  title: "Diagnostico assistido por computador no Cancro Colorretal: podemos fazê-lo?"
+  link: "http://hdl.handle.net/10400.22/19708"
+  grade: null
+
+- name: "Manuel José Pereira Curral"
+  year: 2021
+  role: supervisor
+  title: "Machine learning in the diagnosis of disorders of consciousness using SMART"
+  link: "https://hdl.handle.net/10216/137525"
+  grade: null
+
+- name: "Victor Manuel Alves"
+  year: 2021
+  role: cosupervisor
+  title: "Classification of Pulmonary Nodules in 2-[18F]FDG PET/CT Images with Convolutional Neural Networks"
+  link: "https://hdl.handle.net/10216/136630"
+  grade: null
+
+- name: "Rolando de Sousa Chichorro Avides Moreira"
+  year: 2021
+  role: supervisor
+  title: "Scene understanding from 3D point clouds and RGB images for autonomous driving"
+  link: "https://hdl.handle.net/10216/135288"
+  grade: null
+
+- name: "Bernardo Magina Madureira Palha de Araujo"
+  year: 2021
+  role: supervisor
+  title: "Label-efficient learning of LiDAR-based perception models for autonomous driving"
+  link: "https://hdl.handle.net/10216/135271"
+  grade: null
+
+- name: "Maria Helena Sampaio de Mendonça Montenegro e Almeida"
+  year: 2021
+  role: supervisor
+  title: "A privacy-preserving framework for case-based interpretability in machine learning"
+  link: "https://hdl.handle.net/10216/135434"
+  grade: null
+
+- name: "Pedro Antonio Ferreira Cardoso Videira Lopes"
+  year: 2021
+  role: supervisor
+  title: "Generative XAI in Computer-Aided Detection of Glaucoma Risk"
+  link: "https://hdl.handle.net/10216/135463"
+  grade: null
+
+- name: "Martim Gil Reis Chaves"
+  year: 2021
+  role: supervisor
+  title: "Deep Learning for Backscatter Classification"
+  link: "https://hdl.handle.net/10216/135349"
+  grade: null
+
+- name: "Ines Alexandra Teixeira Antunes de Magalhaes"
+  year: 2021
+  role: supervisor
+  title: "Feel My Heart: Emotion Recognition Using the Electrocardiogram"
+  link: "https://hdl.handle.net/10216/135339"
+  grade: null
+
+- name: "Sofia Cardoso Beco"
+  year: 2021
+  role: supervisor
+  title: "Make My Heartbeat: Generation and Interlead Conversion of ECG Signals"
+  link: "https://hdl.handle.net/10216/136092"
+  grade: null
+
+- name: "Isabella Medeiros de Sousa"
+  year: 2021
+  role: supervisor
+  title: "Machine Learning para Segmentação de Lesões de Esclerose Múltipla em Imagens de Ressonância Magnética"
+  link: "https://hdl.handle.net/10216/135583"
+  grade: null
+
+- name: "Maria Carolina Silva Teixeira Pinto"
+  year: 2021
+  role: supervisor
+  title: "Automotive Interior Sensing - Human Interaction Recognition"
+  link: "https://hdl.handle.net/10216/133674"
+  grade: null
+
+- name: "José Pedro Passos Leocádio"
+  year: 2021
+  role: supervisor
+  title: "Protecting IOT devices against cyberattacks using deep learning to classify radio-frequency emissions of code running on the processor"
+  link: "https://hdl.handle.net/10216/133036"
+  grade: null
+
+- name: "Beatriz Oliveira Ferreira"
+  year: 2020
+  role: cosupervisor
+  title: "Multimodal approach to Alzheimer's Disease Classification"
+  link: "https://fenix.tecnico.ulisboa.pt/cursos/meec/dissertacao/1409728525633100"
+  grade: null
 
 - name: "Arthur Johas Matta"
   year: 2020
-  role: "FEUP (supervisor)"
-  title: "Open-World Face Recognition"
+  role: supervisor
+  title: "Open­World Face Recognition"
   link: "https://hdl.handle.net/10216/130042"
+  grade: null
 
-- name: "Francisca Morgado"
+- name: "Joao Manuel Guedes Ferreira"
+  year: 2020
+  role: cosupervisor
+  title: "Head Pose Estimation for Facial Biometric Recognition Systems"
+  link: "https://hdl.handle.net/10216/129254"
+  grade: null
+
+- name: "Jose Martinho Oliveira Peres"
+  year: 2020
+  role: supervisor
+  title: "Automotive Interior Sensing - Temporal Consistent Human Body Pose Estimation"
+  link: "https://hdl.handle.net/10216/132796"
+  grade: null
+
+- name: "Pedro Miguel Coutinho Augusto"
+  year: 2020
+  role: supervisor
+  title: "Automotive Interior Sensing - Anomaly Detection"
+  link: "https://hdl.handle.net/10216/132640"
+  grade: null
+
+- name: "Mariana Lopes da Silva"
+  year: 2020
+  role: supervisor
+  title: "Reduction of non-regression time through artificial intelligence"
+  link: "https://hdl.handle.net/10216/128575"
+  grade: null
+
+- name: "Francisco Tuna Andrade"
+  year: 2020
+  role: supervisor
+  title: "Adversarial Domain Adaptation for Sensor Networks"
+  link: "https://hdl.handle.net/10216/128553"
+  grade: null
+
+- name: "Joao Afonso Pinto Pereira"
+  year: 2020
+  role: cosupervisor
+  title: "Fingerprint Anti Spoofing - Domain Adaptation and Adversarial Learning"
+  link: "https://hdl.handle.net/10216/128390"
+  grade: null
+
+- name: "Pedro Manuel dos Santos Ribeiro"
+  year: 2020
+  role: cosupervisor
+  title: "Machine Learning Improvements to Human Motion Tracking"
+  link: "https://hdl.handle.net/10216/128223"
+  grade: null
+
+- name: "Maria Francisca Pessanha de Meneses Ribeiro dos Reis"
+  year: 2020
+  role: cosupervisor
+  title: "Automatic Assessment of Equestrian Pain"
+  link: "https://hdl.handle.net/10216/128351"
+  grade: null
+
+- name: "Hugo Miguel Miranda Barros"
+  year: 2020
+  role: cosupervisor (FEUP)
+  title: "Aquaculture Fish Quality Control Using Synthetic Data"
+  link: "https://hdl.handle.net/10216/128137"
+  grade: null
+
+- name: "Francisca Marques de Almeida Morgado"
   year: 2019
-  role: "FEUP (supervisor)"
-  title: "Cervical Cancer Screening Tools"
+  role: supervisor (FEUP)
+  title: "Cervical Cancer Screening: Deep Learning Tools For Automatic Diagnosis Support"
   link: "https://hdl.handle.net/10216/123068"
+  grade: null
 
 - name: "João Soares Sousa"
   year: 2019
-  role: "FEUP (supervisor)"
-  title: "Waste Sorting with Deep Learning"
+  role: supervisor (FEUP)
+  title: "Automation of Waste Sorting with Deep Learning"
   link: "https://hdl.handle.net/10216/121363"
+  grade: null
+
+- name: "António Pedro Rodrigues Pereira"
+  year: 2019
+  role: cosupervisor (FEUP)
+  title: "Detection and Classification of Obstacles for Autonomous Vessels using Machine Learning"
+  link: "https://hdl.handle.net/10216/122034"
+  grade: null
+
+- name: "Margarida João Castro Neves Fernandes"
+  year: 2019
+  role: supervisor (FEUP)
+  title: "Driver Drowsiness Detection Using Non-Intrusive Eletrocardiogram and Steering Wheel Angle Signals"
+  link: "https://hdl.handle.net/10216/122936"
+  grade: null
+
+- name: "Gabriel Carneiro Lopes"
+  year: 2019
+  role: supervisor (FEUP)
+  title: "Don't You Forget About Me: Enhancing Long-Term Performance in Electrocardiogram Biometrics"
+  link: "https://hdl.handle.net/10216/121823"
+  grade: null
+
+- name: "Tiago Filipe Sousa Goncalves"
+  year: 2019
+  role: supervisor (FEUP)
+  title: "Deep Aesthetic Assessment of Breast Cancer Surgery Outcomes"
+  link: "https://hdl.handle.net/10216/121865"
+  grade: null
+
+- name: "Diogo Antunes Vaz de Carvalho"
+  year: 2019
+  role: supervisor (FEUP)
+  title: "Framework for Machine Learning Interpretability Assessment"
+  link: "https://hdl.handle.net/10216/122776"
+  grade: null
+
+- name: "Ana Filipa Adonias Costa"
+  year: 2019
+  role: supervisor (FEUP)
+  title: "Towards Automatic Detection and Quantification of Mice Arthritis"
+  link: "https://hdl.handle.net/10216/121824"
+  grade: null
+
+- name: "José Luís Pacheco Martins"
+  year: 2019
+  role: supervisor (FEUP)
+  title: "Glaucoma in Fundus Image"
+  link: "https://hdl.handle.net/10216/122772"
+  grade: null
+
+- name: "Jóni Ramiro Pires Gonçalves"
+  year: 2018
+  role: supervisor (FEUP)
+  title: "Vehicle's Interior Presence Detection and Notification System"
+  link: "http://hdl.handle.net/10216/114138"
+  grade: null
+
+- name: "Filipa Branco Fanzeres de Castro"
+  year: 2018
+  role: supervisor (FEUP)
+  title: "Efficiently Scaling the Annotation of Tennis Videos via Crowdsourcing"
+  link: "http://hdl.handle.net/10216/113811"
+  grade: null
+
+- name: "Jose Soares Rebelo"
+  year: 2018
+  role: supervisor  (FEUP)
+  title: "CNN-Based Refinement for Image Segmentation"
+  link: "http://hdl.handle.net/10216/114115"
+  grade: null
+
+- name: "Filipe Martins Marques"
+  year: 2018
+  role: supervisor  (FEUP)
+  title: "Facial Expression Recognition: Towards Meaningful Prior Knowledge in Deep Neural Networks"
+  link: "http://hdl.handle.net/10216/113502"
+  grade: null
+
+- name: "Ricardo Dantas Cerqueira"
+  year: 2018
+  role: supervisor (FEUP)
+  title: "New Learning Strategies in Deep Models for Breast Cancer Screening"
+  link: "http://hdl.handle.net/10216/115041"
+  grade: null
+
+- name: "Ricardo Dantas Cerqueira"
+  year: 2018
+  role: "FEUP (supervisor)"
+  title: "New Learning Strategies in Deep Models for Breast Cancer Screening"
+  link: "http://hdl.handle.net/10216/115041"
+
+- name: "Licinio Manuel França de Oliveira"
+  year: 2018
+  role: "FEUP (supervisor)"
+  title: "Driver drowsiness detection using non-intrusive signal acquisition"
+  link: "http://hdl.handle.net/10216/113802"
 
 - name: "Guilherme de Oliveira Santos"
   year: 2018
   role: "FEUP (supervisor)"
-  title: "Automotive Interior Sensing"
+  title: "Automotive Interior Sensing Imaging solutions"
   link: "http://hdl.handle.net/10216/114061"
 
-- name: "Tiago Salgado Magalhães"
+- name: "Borgine Vasques Gurue"
   year: 2017
   role: "FEUP (supervisor)"
-  title: "Reinforcement Learning for Scheduling"
-  link: "http://hdl.handle.net/10216/108395"
+  title: "Analise e Classificacao de Imagem Hiper-espectral"
+  link: "http://hdl.handle.net/10216/105794"
+
+- name: "Bruno Miguel Ferreira Moreira"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Analise Automatica de Melanoma Utilizando Imagens Dermatoscopicas"
+  link: "http://hdl.handle.net/10216/106112"
+
+- name: "Eduardo Meca Castro"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Rotated Filters and Learning Strategies in Convolutional Neural Networks for Mammographic Lesions Detection"
+  link: "http://hdl.handle.net/10216/105792"
+
+- name: "Pedro Guilherme Reis Alves"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Automatic Assessment of Infantile Hemangiomas"
+  link: "http://hdl.handle.net/10216/107451"
+
+- name: "Tiago Salgado Magalhães Taveira-Gomes"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Reinforcement Learning for Primary care e Appointment Scheduling"
+  link: "https://hdl.handle.net/10216/108395"
+
+- name: "Sofia de Sousa Almeida"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Performance assessment and prediction of football players: Tailoring an architecture with spatiotemporal positional and physiological features"
+  link: "http://hdl.handle.net/10216/107499"
+
+- name: "Claudia Sofia Alferes Ribeiro da Silva Silveira"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Driver's Fatigue State Monitoring using Physiological Signals"
+  link: "http://hdl.handle.net/10216/106499"
+
+- name: "Joao Tiago Ribeiro Pinto"
+  year: 2017
+  role: "FEUP (supervisor)"
+  title: "Continuous Biometric Identification on the Steering Wheel"
+  link: "http://hdl.handle.net/10216/106106"
+
+- name: "Salik Ram Khanal"
+  year: 2016
+  role: "FEUP (supervisor)"
+  title: "Machine Learning for Supermarket Data Analysis"
+  link: "http://hdl.handle.net/10216/85087"
+
+- name: "Tiago Daniel Santos Freitas"
+  year: 2016
+  role: "FEUP (supervisor)"
+  title: "3D Face Recognition Under Unconstrained Settings Using Low-Cost Sensors"
+  link: "http://hdl.handle.net/10216/84513"
 
 - name: "Ricardo Reis Marques Silva"
   year: 2016
@@ -79,15 +656,28 @@
   title: "Measuring Impedance in Congestive Heart Failure"
   link: "http://hdl.handle.net/10216/85148"
 
+- name: "Rui Cardoso Esteves"
+  year: 2015
+  role: "FEUP (supervisor)"
+  title: "Mobile multimodal biometric identification for african communities"
+  link: "http://hdl.handle.net/10216/79575"
+
 - name: "Ana Filipa Domingues Geros"
   year: 2015
   role: "FEUP (co-supervisor)"
   title: "Capture and analysis of the trajectories of anatomical points on the face to support and evaluate reconstructive plastic surgery"
   link: "http://hdl.handle.net/10216/79460"
 
+- name: "Hugo Miguel Felgueira de Andrade"
+  year: 2015
+  role: "FEUP (supervisor)"
+  title: "Image processing methodology for blood cell counting via mobile devices"
+  link: "http://hdl.handle.net/10216/79416"
 
-
-
+- name: "Pedro Manuel Nunes Sequeira"
+  year: 2015
+  role: "FEUP (supervisor)"
+  title: "Hierarchical Dynamical Systems"
 
 - name: "Andre Filipe Ferreira de Castro"
   year: 2014
