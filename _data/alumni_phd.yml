@@ -7,20 +7,20 @@
 - name: "Leonardo Gomes Capozzi"
   start: 2020
   end: 2026
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Human-Centric Sensing and Understanding Using Vision and Wi-Fi Signals"
 
 - name: "Isabel Cristina Rio-Torto de Oliveira"
   start: 2020
   end: 2026
-  role: "FCUP (co-supervisor)"
+  role: "FCUP (cosupervisor)"
   title: "Weakly Supervised Multimodal Explanations for Medical Image Classification"
   link: "https://hdl.handle.net/10216/174479"
 
 - name: "Pedro David Carneiro Neto"
   start: 2020
   end: 2025
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Explainability, Fairness and Privacy in AI for Biometrics"
   link: "https://hdl.handle.net/10216/169904"
 
@@ -29,7 +29,7 @@
   end: 2025
   role: "FEUP (supervisor)"
   title: "Interpretable Machine Learning and its Application to Medical Decision Support Systems"
-  link: https://hdl.handle.net/10216/167560
+  link: "https://hdl.handle.net/10216/167560"
 
 - name: "Diana Leitão Montezuma Pego Felizardo"
   start: 2020
@@ -41,7 +41,7 @@
 - name: "Maxime Dumont"
   start: 2021
   end: 2024
-  role: "Aix-Marseille Université (co-supervisor)"
+  role: "Aix-Marseille Université (cosupervisor)"
   title: "Deep Learning pour le phasage de télescope segmenté. Analyse de front d'onde en plan focal pour télescope spatial : application au phasage d’un Cubesat deployable pour l'observation de la Terre."
 
 - name: "Tomé Mendes Albuquerque"
@@ -54,7 +54,7 @@
 - name: "Eduardo Meca Castro"
   start: 2018
   end: 2023
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Deep Learning based Computer Aided Diagnosis for Breast Cancer Screening"
   link: "https://hdl.handle.net/10216/152826"
 
@@ -75,21 +75,21 @@
 - name: "Sara Isabel Pires de Oliveira"
   start: 2018
   end: 2022
-  role: "FEUP (co-supervisor)"  
+  role: "FEUP (cosupervisor)"  
   title: "Cancer diagnosis in digital pathology: learning from label scarcity"
   link: "https://hdl.handle.net/10216/147109"	
   
 - name: "Ana Filipa Domingues Geros"
   start: 2016
   end: 2022
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Novel Tools for Quantification and Automatic Classification of Behavior in Laboratory Animals - Advancing Computational Ethology"
   link: "https://hdl.handle.net/10216/143076"
 
 - name: "Ricardo Jorge Terroso de Araujo"
   start: 2016
   end: 2021
-  role: "FCUP (co-supervisor)"  
+  role: "FCUP (cosupervisor)"  
   title: "Computer vision for blood vessel segmentation and related applications"
   link: "https://hdl.handle.net/10216/139149"			
 
@@ -103,7 +103,7 @@
 - name: "Sílvia da Conceição Neto Bessa"
   start: 2016
   end: 2021
-  role: "FEUP (co-supervisor)"  
+  role: "FEUP (cosupervisor)"  
   title: "Personalized 3D Breast Cancer Models: from Multimodal Registration to Predictive Shape Modelling"
   link: "https://hdl.handle.net/10216/136835"	
 
@@ -124,14 +124,14 @@
 - name: "Pedro Miguel Martins Ferreira"
   start: 2015
   end: 2020
-  role: "FEUP (co-supervisor)"  
+  role: "FEUP (cosupervisor)"  
   title: "Sign Language Recognition: Integrating Prior Domain Knowledge into Deep Neural Networks"
   link: "https://hdl.handle.net/10216/126550"
   
 - name: "Anisa Allahdadidastjerdi"
   start:  2012
   end: 2020
-  role: "FEUP (co-supervisor)"  
+  role: "FEUP (cosupervisor)"  
   title: "Performance Anomaly Detection in 802.11 Wireless Networks Applying Hidden Markov Models"
   link: "https://hdl.handle.net/10216/126613"		
 
@@ -152,7 +152,7 @@
 - name: "Hooshiar Zolfagharnasab"
   start: 2012
   end: 2018
-  role: "FEUP (co-supervisor)"  
+  role: "FEUP (cosupervisor)"  
   title: "Toward a 3D Planning Approach for Breast Conserving Surgery"
   link: "http://hdl.handle.net/10216/114376"
   
@@ -203,7 +203,7 @@
 - name: "Andre Miguel Passos Baltazar"
   start: 2009
   end: 2015
-  role: "Escola das Artes, Univ. Catolica (co-supervisor)"
+  role: "Escola das Artes, Univ. Catolica (cosupervisor)"
   title: "Zatlab: Recognizing gestures for artistic performance interaction"
   link: "http://hdl.handle.net/10400.14/16712"	
     
@@ -231,6 +231,6 @@
 - name: "Pedro Miguel Machado Soares Carvalho"
   start: 2007
   end: 2012
-  role: "FEUP (co-supervisor)"
+  role: "FEUP (cosupervisor)"
   title: "Video Object Tracking - Contributions to Object Description and Performance Assessment"
   link: "http://hdl.handle.net/10216/65990"

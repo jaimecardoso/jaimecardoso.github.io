@@ -32,7 +32,13 @@ nav_order: 8
 
 <div style="margin-top: 20px;">
 
+
+{% comment %}
 {% assign phd = site.data.alumni_phd | sort: "end" | reverse %}
+{% endcomment %}
+
+
+{% assign phd = site.data.alumni_phd %}
 
 {% for s in phd %}
 
