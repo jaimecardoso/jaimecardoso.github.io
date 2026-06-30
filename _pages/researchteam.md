@@ -72,23 +72,26 @@ with the aim of ensuring reliability, transparency, and accountability beyond co
 
 <ul style="list-style: none; padding-left: 0;">
 
-<li><strong style="color:#4c72b0;">2025–</strong> Mariana Doria Prata Lima — <em>LNCC</em> (co-supervisor)</li>
-
-<li><strong style="color:#4c72b0;">2024–</strong> Felipe Coutinho — <em>FEUP</em> (supervisor)</li>
-<li><strong style="color:#4c72b0;">2024–</strong> Wenwu Ma — <em>FEUP</em> (supervisor)</li>
-<li><strong style="color:#4c72b0;">2024–</strong> Chao Liu — <em>FEUP</em> (co-supervisor)</li>
-<li><strong style="color:#4c72b0;">2024–</strong> Pedro Lima — <em>FEUP</em> (co-supervisor)</li>
-<li><strong style="color:#4c72b0;">2024–</strong> Safa Vakili — <em>FEUP</em> (co-supervisor)</li>
-
+<li><strong style="color:#4c72b0;">2022–</strong> João Diogo Fernandes Freitas Nunes — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2022–</strong> Bruno Fonseca — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2022–</strong> Beatriz Vieira — <em>IST</em> (cosupervisor)</li>
+<br>
 <li><strong style="color:#4c72b0;">2023–</strong> Hossein Zolfagharnasab — <em>FEUP</em> (supervisor)</li>
 <li><strong style="color:#4c72b0;">2023–</strong> Arefeh Mazarei — <em>FEUP</em> (supervisor)</li>
-
-<li><strong style="color:#4c72b0;">2022–</strong> João Diogo Fernandes Freitas Nunes — <em>FEUP</em> (supervisor)</li>
-<li><strong style="color:#4c72b0;">2022–</strong> Beatriz Vieira — <em>IST</em> (co-supervisor)</li>
-<li><strong style="color:#4c72b0;">2022–</strong> Bruno Fonseca — <em>FEUP</em> (supervisor)</li>
-
-<li><strong style="color:#4c72b0;">2021–</strong> Maria Helena Sampaio de Mendonça Montenegro e Almeida — <em>FEUP</em> (supervisor)</li>
-
+<br>
+<li><strong style="color:#4c72b0;">2024–</strong> Felipe Coutinho — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Wenwu Ma — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Chao Liu — <em>FEUP</em> (cosupervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Pedro Lima — <em>FEUP</em> (cosupervisor)</li>
+<li><strong style="color:#4c72b0;">2024–</strong> Safa Vakili — <em>FEUP</em> (cosupervisor)</li>
+<br>
+<li><strong style="color:#4c72b0;">2025–</strong> Mariana Doria Prata Lima — <em>LNCC</em> (cosupervisor)</li>
+<li><strong style="color:#4c72b0;">2025–</strong> Maria Salvador  — <em>FEUP</em> (cosupervisor)</li>
+<li><strong style="color:#4c72b0;">2025–</strong> Joaquim Fonseca — <em>FEUP</em> (cosupervisor)</li>
+<li><strong style="color:#4c72b0;">2025–</strong> Juan Yuri Díaz Sánchez — <em>Vigo</em> (cosupervisor)</li>
+<li><strong style="color:#4c72b0;">2025–</strong> Luis Silva — <em>FEUP</em> (cosupervisor)</li>
 </ul>
-
+<li><strong style="color:#4c72b0;">2026–</strong> Lucas Moreira — <em>FEUP</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2026–</strong> Bryan Ebiyau — <em>FEUP/CMU</em> (supervisor)</li>
+<li><strong style="color:#4c72b0;">2026–</strong> Bryan Bosho  — <em>FEUP/CMU</em> (supervisor)</li>
 </div>
