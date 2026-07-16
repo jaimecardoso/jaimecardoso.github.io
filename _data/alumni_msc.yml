@@ -1,3 +1,39 @@
+- name: "Lucas Viana Rodrigues Cabral Santiago"
+  year: 2026
+  role: supervisor
+  title: "DARP-Net: A Depth-Aware Robust Projection Framework for OCTA Vessel Segmentation"
+  grade: 18
+  
+- name: "Tomás de Paula Pinto Sousa Ribeiro"
+  year: 2026
+  role: supervisor
+  title: "Uncertainty-Driven Cascaded Framework for OCTA Segmentation"
+  grade: 19
+
+- name: "Inês Ferreira de Almeida"
+  year: 2026
+  role: supervisor
+  title: "Anomaly Detection in Image Acquisition Systems for Industrial Computer Vision"
+  grade: 18
+
+- name: "Rodrigo José Ramos Moucho"
+  year: 2026
+  role: supervisor
+  title: "Positional Bias in Object Detection Models"
+  grade: 20
+
+- name: "Tomás Miranda de Figueiredo Sarmento"
+  year: 2026
+  role: cosupervisor
+  title: "High performance computing machine learning architecture for the LISA Global Fit"
+  grade: 17
+
+- name: "Gonçalo Bessa Costa"
+  year: 2026
+  role: cosupervisor
+  title: "Deep learning enabled star tracker"
+  grade: 19
+
 - name: "Luis Silva Sousa"
   year: 2025
   role: cosupervisor
@@ -87,49 +123,48 @@
   role: supervisor
   title: "Sistema de comparação de objectos com base em AI/ML"
   link: "https://hdl.handle.net/10216/162337"
-  grade: null
+  grade: 13
 
 - name: "Joao Filipe Miranda Fragao"
   year: 2024
   role: cosupervisor
   title: "Explainability and Detection of Anomalies in Video"
   link: "https://hdl.handle.net/10216/162597"
-  grade: null
+  grade: 16
 
 - name: "Nikolas Ivakko"
   year: 2024
   role: cosupervisor
   title: "Exploring 3D and kinematic information for 2D Human Pose Estimation"
   link: "https://hdl.handle.net/10216/162628"
-  grade: null
+  grade: 19
 
 - name: "Pedro Miguel Sampaio Ferreira Machado"
   year: 2024
   role: supervisor
   title: "A deep generative approach for HER2 status assessment on breast H&E"
-  grade: null
-
+  grade: 17
 
 - name: "Maria José Valente da Silva Carneiro"
   year: 2024
   role: supervisor
   title: "Quality Control in Digital Pathology: Improving fragment detection and counting"
   link: "https://hdl.handle.net/10216/161069"
-  grade: null
+  grade: 18
 
 - name: "Maria Miguel Santos Beirao"
   year: 2024
   role: supervisor
   title: "Classification of Keratitis from Eye Corneal Photographs using Deep Learning: A Comparative Study on Amoeba, Bacteria, and Fungi"
   link: "https://hdl.handle.net/10216/161004"
-  grade: null
+  grade: 19
 
 - name: "Ines Alves Martins"
   year: 2024
   role: supervisor
   title: "A Data-Driven Framework for the Assessment and Mitigation of Clinical Measurement Disparities"
   link: "https://hdl.handle.net/10216/160989"
-  grade: null
+  grade: 20
 
 - name: "Airton Matos Andrade Fernandes Tiago"
   year: 2024
@@ -150,7 +185,7 @@
   role: supervisor
   title: "Prediction of Knee Osteoarthritis using MRI-based Radiomic Features"
   link: "https://hdl.handle.net/10216/153172"
-  grade: null
+  grade: 18
 
 - name: "Mariana Margalho Alves Calado"
   year: 2023
@@ -185,28 +220,28 @@
   role: cosupervisor
   title: "Explainable AI in Object Detection for Autonomous Driving"
   link: "https://hdl.handle.net/10216/151986"
-  grade: null
+  grade: 18
 
 - name: "Ricardo Jorge Cruz Fontão"
   year: 2023
   role: supervisor
   title: "Multimodal Deep Implicit Representations for Autonomous Driving"
   link: "https://hdl.handle.net/10216/152091"
-  grade: null
+  grade: 18
 
 - name: "Maria Carolina Morgado Bastião Guedes Brás"
   year: 2023
   role: supervisor
   title: "Deep Learning for improved NCP quantification and false positive reduction in CCTA"
   link: "https://hdl.handle.net/10216/151879"
-  grade: null
+  grade: 19
 
-- name: "Joao Carlos Ramos Goncalves de Matos"
+- name: "Joao Carlos Ramos Goncalves Matos"
   year: 2023
   role: supervisor
   title: "Research Frameworks towards Health Equity"
   link: "https://hdl.handle.net/10216/150994"
-  grade: null
+  grade: 20
 
 - name: "Joao Filipe Delgado Lemos de Matos"
   year: 2023
@@ -451,7 +486,7 @@
   role: cosupervisor
   title: "Fingerprint Anti Spoofing - Domain Adaptation and Adversarial Learning"
   link: "https://hdl.handle.net/10216/128390"
-  grade: null
+  grade: 20
 
 - name: "Pedro Manuel dos Santos Ribeiro"
   year: 2020
@@ -479,7 +514,7 @@
   role: supervisor (FEUP)
   title: "Cervical Cancer Screening: Deep Learning Tools For Automatic Diagnosis Support"
   link: "https://hdl.handle.net/10216/123068"
-  grade: null
+  grade: 20
 
 - name: "João Soares Sousa"
   year: 2019
@@ -631,6 +666,7 @@
   role: "FEUP (supervisor)"
   title: "Continuous Biometric Identification on the Steering Wheel"
   link: "http://hdl.handle.net/10216/106106"
+  grade: 20  
 
 - name: "Salik Ram Khanal"
   year: 2016
