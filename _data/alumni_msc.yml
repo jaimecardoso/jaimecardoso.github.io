@@ -1,3 +1,39 @@
+- name: "David Pereira Dias"
+  year: 2026
+  role: supervisor
+  title: "Robust Representation Learning for Spiking Neural Networks with Contrastive Learning and Triplet Loss: Applications to Facial Biometric Verification"
+  grade: 18
+  
+- name: "Filipe Brandão Carvalho Ramos Carrola"
+  year: 2026
+  role: supervisor
+  title: "Calibration of Spiking Neural Networks for Ordinal Classification"
+  grade: 19
+
+- name: "Brenda Gonçalves Belíssimo"
+  year: 2026
+  role: supervisor
+  title: "Towards Robust Segmentation Pipeline for Breast Aesthetics: Utilizing Semi-supervised Learning and Knowledge Distillation for Improving Consistency"
+  grade: 17
+
+- name: "David Amorim Cordeiro"
+  year: 2026
+  role: cosupervisor
+  title: "Reverting morphing attacks using latent cold diffusion models"
+  grade: 19
+
+- name: "Maria Rita Nogueira Lopes"
+  year: 2026
+  role: cosupervisor
+  title: "Diagnosing Together: Multi-Label Multiple Instance Learning and Statistical Dependency Modelling for Gastric Cancer Precursors"
+  grade: 19
+
+- name: "Ana Sofia Soares Ferreira"
+  year: 2026
+  role: supervisor
+  title: "Reading Between the Stains: Automatic HER2 Prediction on Breast H&E Slides"
+  grade: 18
+
 - name: "Lucas Viana Rodrigues Cabral Santiago"
   year: 2026
   role: supervisor
