@@ -52,13 +52,12 @@ I have supervised numerous MSc and PhD students and regularly collaborate with a
 
 I welcome inquiries from prospective PhD students and postdoctoral researchers interested in artificial intelligence, computer vision, medical imaging, trustworthy machine learning, explainable AI, and healthcare applications.
 
-Learn https://study-research.pt/ why Portugal is an excellent destination for advanced studies and research.
+Learn [here] (https://study-research.pt/) why Portugal is an excellent destination for advanced studies and research.
 
 
 ---
 
 ## Academic Profiles
-
 
 <div class="row">
   <div class="col-sm-6">
@@ -68,7 +67,7 @@ Learn https://study-research.pt/ why Portugal is an excellent destination for ad
   <li><i class="ai ai-scopus"></i> <a href="https://www.scopus.com/authid/detail.url?authorId=9245302400">Scopus</a></li>  
   <li><i class="ai ai-orcid"></i> <a href="https://orcid.org/0000-0002-3760-2473">ORCID</a></li>
   <li><i class="ai ai-dblp"></i> <a href="https://dblp.org/pid/65/5236">DBLP</a></li>
-  <li> <a href="https://www.authenticus.pt/R-000-6H2">Authenticus</a></li>
+  <li>📋 <a href="https://www.authenticus.pt/R-000-6H2">Authenticus</a></li>
 
 
 </ul>
@@ -82,10 +81,9 @@ Learn https://study-research.pt/ why Portugal is an excellent destination for ad
   <li><i class="ai ai-researchgate"></i> <a href="https://www.researchgate.net/profile/Jaime-Cardoso">ResearchGate</a></li>
   <li>🔬 <a href="https://publons.com/researcher/I-3286-2013">Web of Science</a></li>
   <li>📊 <a href="https://www.cienciavitae.pt/6017-2B87-B242">Ciência Vitae</a></li>
-  <li> <a href="https://openalex.org/authors/A5013827007">OpenAlex</a></li>
+  <li>📣 <a href="https://openalex.org/authors/A5013827007">OpenAlex</a></li>
 
 </ul>
-
   </div>
 </div>
 
@@ -97,11 +95,10 @@ Learn https://study-research.pt/ why Portugal is an excellent destination for ad
 - 🏆 [World’s Top 2% Scientists](https://topscinet.com/scientist_profile/Cardoso,%20Jaime%20S./2005/?stype=single_year)  
 - 📈 [Global Scientometrics ranking](https://scientometrics.org/global/?openalexid=A5013827007&discipline=1702)  
 -  [World's top 5% scientists](https://top5percentscientists.com/?query=jaime+s.+cardoso)
+
+
 <!-- 
 https://scholargps.com/search.php?q=jaime%20cardoso&type=profile&scholar_ranks_user_id=64910782845690
-
-
-
 
 https://research.com/scientists-rankings/computer-science/pt
 https://adscientificindex.com/
