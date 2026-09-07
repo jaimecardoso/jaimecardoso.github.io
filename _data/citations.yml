@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-09-04'
+  last_updated: '2026-09-07'
 papers:
   fadRi1YAAAAJ:-6RzNnnwWf8C:
     citations: 0
@@ -10,7 +10,7 @@ papers:
     title: Deep image segmentation by quality inference
     year: '2018'
   fadRi1YAAAAJ:-DxkuPiZhfEC:
-    citations: 64
+    citations: 65
     title: Automatic detection of perforators for microsurgical reconstruction
     year: '2020'
   fadRi1YAAAAJ:-FonjvnnhkoC:
@@ -18,7 +18,7 @@ papers:
     title: Identification of benign breasts during mammogram screening
     year: '2012'
   fadRi1YAAAAJ:-_dYPAW6P2MC:
-    citations: 61
+    citations: 62
     title: "The breast cancer conservative treatment. Cosmetic results\u2013BCCT. core\u2013Software for objective assessment of esthetic outcome in breast cancer conservative treatment: A narrative \u2026"
     year: '2016'
   fadRi1YAAAAJ:-f6ydRqryjwC:
@@ -82,7 +82,7 @@ papers:
     title: Soft rotation equivariant convolutional neural networks
     year: '2020'
   fadRi1YAAAAJ:1taIhTC69MYC:
-    citations: 144
+    citations: 146
     title: Elastic deformations for data augmentation in breast cancer mass detection
     year: '2018'
   fadRi1YAAAAJ:1yQoGdGgb4wC:
@@ -222,7 +222,7 @@ papers:
     title: Deep neural networks for biometric identification based on non-intrusive ECG acquisitions
     year: '2019'
   fadRi1YAAAAJ:6VlyvFCUEfcC:
-    citations: 26
+    citations: 27
     title: 'Orthomad: Morphing attack detection through orthogonal identity disentanglement'
     year: '2022'
   fadRi1YAAAAJ:6ZzL7HXColQC:
@@ -450,7 +450,7 @@ papers:
     title: Gradient flow based iris segmentation on noisy images
     year: '2012'
   fadRi1YAAAAJ:DBa1UEJaJKAC:
-    citations: 271
+    citations: 272
     title: Evolution, current challenges, and future possibilities in ECG biometrics
     year: '2018'
   fadRi1YAAAAJ:DIubQTN3OvUC:
@@ -462,7 +462,7 @@ papers:
     title: Science Talks
     year: Unknown Year
   fadRi1YAAAAJ:DXE8ND7PrJAC:
-    citations: 331
+    citations: 333
     title: 'Spiking neural networks: A survey'
     year: '2022'
   fadRi1YAAAAJ:D_tqNUsBuKoC:
@@ -738,7 +738,7 @@ papers:
     title: "2022 IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW)| 978-1-6654-5824-5/22/$31.00\xA9 2022 IEEE| DOI: 10.1109/WACVW54805. 2022.00085"
     year: Unknown Year
   fadRi1YAAAAJ:L7CI7m0gUJcC:
-    citations: 64
+    citations: 65
     title: A review of automatic malaria parasites detection and segmentation in microscopic images
     year: '2016'
   fadRi1YAAAAJ:L8Ckcad2t8MC:
@@ -802,7 +802,7 @@ papers:
     title: Hybrid framework for evaluating video object tracking algorithms
     year: '2010'
   fadRi1YAAAAJ:M7yex6snE4oC:
-    citations: 159
+    citations: 160
     title: Towards a continuous biometric system based on ECG signals acquired on the steering wheel
     year: '2017'
   fadRi1YAAAAJ:MAUkC_7iAq8C:
@@ -1002,7 +1002,7 @@ papers:
     title: Symmetry-based regularization in deep breast cancer screening
     year: '2023'
   fadRi1YAAAAJ:RXiHnyRawswC:
-    citations: 13
+    citations: 14
     title: Explaining bounding boxes in deep object detectors using post hoc methods for autonomous driving systems
     year: '2024'
   fadRi1YAAAAJ:RYcK_YlVTxYC:
@@ -1010,7 +1010,7 @@ papers:
     title: Measuring the performance of ordinal classification
     year: '2011'
   fadRi1YAAAAJ:RfUwGJFMQ-0C:
-    citations: 46
+    citations: 47
     title: 'Frcsyn challenge at cvpr 2024: Face recognition challenge in the era of synthetic data'
     year: '2024'
   fadRi1YAAAAJ:RoXSNcbkSzsC:
@@ -1038,7 +1038,7 @@ papers:
     title: 'Max-coupled learning: application to breast cancer'
     year: '2011'
   fadRi1YAAAAJ:ShjGdcaqzI0C:
-    citations: 28
+    citations: 29
     title: 'H&E to IHC virtual staining methods in breast cancer: an overview and benchmarking'
     year: '2025'
   fadRi1YAAAAJ:SjuI4pbJlxcC:
@@ -1058,7 +1058,7 @@ papers:
     title: Integrated recognition system for music scores, 2008
     year: Unknown Year
   fadRi1YAAAAJ:SrKkpNFED5gC:
-    citations: 22
+    citations: 23
     title: 'A survey on cell nuclei instance segmentation and classification: Leveraging context and attention'
     year: '2025'
   fadRi1YAAAAJ:SxCCDk4iOpsC:
@@ -1094,7 +1094,7 @@ papers:
     title: 'Rethinking low-cost microscopy workflow: Image enhancement using deep based Extended Depth of Field methods'
     year: '2023'
   fadRi1YAAAAJ:TlpoogIpr_IC:
-    citations: 2888
+    citations: 2897
     title: 'Machine learning interpretability: A survey on methods and metrics'
     year: '2019'
   fadRi1YAAAAJ:Tyk-4Ss8FVUC:
@@ -1102,7 +1102,7 @@ papers:
     title: 'Optical recognition of music symbols: A comparative study'
     year: '2010'
   fadRi1YAAAAJ:U0iAMwwPxtsC:
-    citations: 19
+    citations: 20
     title: 'Unveiling the two-faced truth: Disentangling morphed identities for face morphing detection'
     year: '2023'
   fadRi1YAAAAJ:U4n9YNQMCAIC:
@@ -1214,7 +1214,7 @@ papers:
     title: 'Automatic speaker segmentation using multiple features and distance measures: A comparison of three approaches'
     year: '2006'
   fadRi1YAAAAJ:WHdLCjDvYFkC:
-    citations: 121
+    citations: 120
     title: Supervised deep learning embeddings for the prediction of cervical cancer diagnosis
     year: '2018'
   fadRi1YAAAAJ:WIXB4To3Tx4C:
@@ -1242,7 +1242,7 @@ papers:
     title: A cognitively-motivated framework for partial face recognition in unconstrained scenarios
     year: '2015'
   fadRi1YAAAAJ:WwIwg2wKZ0QC:
-    citations: 107
+    citations: 109
     title: 'A survey on attention mechanisms for medical applications: are we moving toward better algorithms?'
     year: '2022'
   fadRi1YAAAAJ:WzTVkKNmPSkC:
@@ -1310,7 +1310,7 @@ papers:
     title: 'Shining light on dark skin: pulse oximetry correction models'
     year: '2023'
   fadRi1YAAAAJ:YB4bud6kWLwC:
-    citations: 78
+    citations: 79
     title: CAD systems for colorectal cancer from WSI are still not ready for clinical acceptance
     year: '2021'
   fadRi1YAAAAJ:YFjsv_pBGBYC:
@@ -1622,7 +1622,7 @@ papers:
     title: Staff detection with stable paths
     year: '2009'
   fadRi1YAAAAJ:gV6rEsy15s0C:
-    citations: 6
+    citations: 7
     title: On the suitability of b-cos networks for the medical domain
     year: '2024'
   fadRi1YAAAAJ:geHnlv5EZngC:
@@ -1666,7 +1666,7 @@ papers:
     title: 'Evaluation of combined artificial intelligence and radiologist assessment to interpret screening mammograms. JAMA Netw Open. 2020; 3 (3): e200265'
     year: '2020'
   fadRi1YAAAAJ:hMod-77fHWUC:
-    citations: 1646
+    citations: 1647
     title: 'Inbreast: toward a full-field digital mammographic database'
     year: '2012'
   fadRi1YAAAAJ:hMsQuOkrut0C:
@@ -1990,7 +1990,7 @@ papers:
     title: A critical analysis about a motion-based approach to extract global trajectories
     year: '2013'
   fadRi1YAAAAJ:qCpRzq7zkD8C:
-    citations: 13
+    citations: 14
     title: 'Unmasking biases and navigating pitfalls in the ophthalmic artificial intelligence lifecycle: A narrative review'
     year: '2024'
   fadRi1YAAAAJ:qE4H1tSSYIIC:
@@ -2382,7 +2382,7 @@ papers:
     title: Spiking Neural Networks for Ordinal Regression
     year: '2026'
   fadRi1YAAAAJ:zdjWy_NXXwUC:
-    citations: 513
+    citations: 514
     title: Evaluation of combined artificial intelligence and radiologist assessment to interpret screening mammograms
     year: '2020'
   fadRi1YAAAAJ:ziOE8S1-AIUC:
